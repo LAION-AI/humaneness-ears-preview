@@ -1,0 +1,25 @@
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[
+  >=Latex, font=\sffamily\small,
+  box/.style={draw=black!65,rounded corners=2pt,thick,align=center,minimum height=1.05cm,inner sep=5pt},
+  data/.style={box,fill=blue!7},
+  model/.style={box,fill=green!13},
+  teacher/.style={box,fill=orange!13},
+  test/.style={box,fill=violet!10},
+  arr/.style={->,thick,draw=black!70}
+]
+\node[data,text width=2.65cm] (ladder) at (0,1.5) {S1--S10 nested speech\\+ 10\% \pthree\ per stage};
+\node[model,text width=2.55cm] (stages) at (4.1,1.5) {best stage weights\\Base S4 / Small S3};
+\node[teacher,text width=3.45cm] (adapt) at (9.0,1.5) {58,380 Gemini train clips\\+ cached specialist targets\\two full-tuning epochs};
+\node[model,text width=2.55cm] (release) at (14.0,1.5) {released encoder-only\\Base / Medium};
+\node[test,text width=3.45cm] (gem) at (5.2,-0.65) {Gemini holdout, $N=3{,}544$\\teacher agreement + event labels};
+\node[test,text width=3.45cm] (human) at (10.1,-0.65) {EmoNet / VoiceNet experts\\CREMA-D / RAVDESS actors};
+\node[test,text width=3.45cm] (p3) at (15.0,-0.65) {paired \pthree\ retention, $N=2{,}000$\\pre- versus post-tuning};
+\draw[arr] (ladder)--(stages);
+\draw[arr] (stages)--(adapt);
+\draw[arr] (adapt)--(release);
+\draw[arr] (release.south) -- ++(0,-.25) -| (gem.north);
+\draw[arr] (release.south) -- ++(0,-.25) -| (human.north);
+\draw[arr] (release.south) -- ++(0,-.25) -| (p3.north);
+\end{tikzpicture}%
+}

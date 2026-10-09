@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Humaneness Ears architecture</title>
+  <desc id="desc">Audio enters a fully fine-tuned Whisper encoder. Global representations predict 192 scores, characters per second, and two Orange speaker vectors. Temporal representations predict vocal-burst occupancy, start and end times, and 53 event types. There is no ASR decoder.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102a40"/><stop offset="1" stop-color="#1d374e"/></linearGradient>
+    <linearGradient id="core" x2="1" y2="1"><stop stop-color="#59d0d5"/><stop offset="1" stop-color="#a9e6d4"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#b7d4df"/></marker>
+  </defs>
+  <rect width="1200" height="680" rx="30" fill="url(#bg)"/>
+  <text x="60" y="66" fill="#f5f0e8" font-size="36" font-family="Arial,sans-serif" font-weight="700">One encoder. Many ways to listen.</text>
+  <text x="60" y="105" fill="#bfd4df" font-size="22" font-family="Arial,sans-serif">Clip-level qualities and timed vocal events share the same audio representation.</text>
+
+  <rect x="58" y="244" width="174" height="156" rx="20" fill="#fff4e9"/>
+  <path d="M82 324h12l8-32 13 63 11-92 13 116 11-70 7 28 9-51 10 77 11-39h20" fill="none" stroke="#db826a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="145" y="380" text-anchor="middle" fill="#153047" font-size="25" font-family="Arial,sans-serif" font-weight="700">audio</text>
+  <path d="M241 322H305" stroke="#b7d4df" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="317" y="206" width="300" height="234" rx="26" fill="url(#core)"/>
+  <text x="467" y="275" text-anchor="middle" fill="#102a40" font-size="31" font-family="Arial,sans-serif" font-weight="700">Whisper encoder</text>
+  <text x="467" y="318" text-anchor="middle" fill="#153047" font-size="25" font-family="Arial,sans-serif">Base or Small backbone</text>
+  <text x="467" y="359" text-anchor="middle" fill="#153047" font-size="22" font-family="Arial,sans-serif">all layers fine-tuned</text>
+  <text x="467" y="402" text-anchor="middle" fill="#153047" font-size="21" font-family="Arial,sans-serif" font-weight="700">no speech decoder</text>
+
+  <path d="M620 322H664V220H700" fill="none" stroke="#b7d4df" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M620 322H664V438H700" fill="none" stroke="#b7d4df" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="712" y="148" width="426" height="160" rx="21" fill="#e8f5ee"/>
+  <text x="745" y="193" fill="#195245" font-size="23" font-family="Arial,sans-serif" font-weight="700">GLOBAL READOUTS</text>
+  <text x="745" y="235" fill="#17364a" font-size="24" font-family="Arial,sans-serif">192 scores + speech rate</text>
+  <text x="745" y="271" fill="#17364a" font-size="22" font-family="Arial,sans-serif">128D timbre · 250D identity</text>
+  <rect x="712" y="360" width="426" height="160" rx="21" fill="#fff0e6"/>
+  <text x="745" y="405" fill="#944b3f" font-size="23" font-family="Arial,sans-serif" font-weight="700">TEMPORAL READOUTS</text>
+  <text x="745" y="447" fill="#17364a" font-size="24" font-family="Arial,sans-serif">20 ms burst timeline</text>
+  <text x="745" y="483" fill="#17364a" font-size="22" font-family="Arial,sans-serif">start + end · 53 event types</text>
+  <line x1="60" y1="572" x2="1140" y2="572" stroke="#4e7285" stroke-width="2"/>
+  <text x="60" y="621" fill="#d5e4e8" font-size="22" font-family="Arial,sans-serif">Teachers create training targets. At inference, this model uses only the encoder and its learned heads.</text>
+</svg>

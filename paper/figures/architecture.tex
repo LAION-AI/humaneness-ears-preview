@@ -1,0 +1,33 @@
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[
+  >=Latex, font=\sffamily\small,
+  box/.style={draw=black!65,rounded corners=2pt,thick,minimum height=1.0cm,align=center,inner sep=5pt},
+  source/.style={box,fill=blue!7},
+  shared/.style={box,fill=cyan!12},
+  global/.style={box,fill=green!13},
+  temporal/.style={box,fill=orange!15},
+  target/.style={box,fill=violet!11},
+  arr/.style={->,thick,draw=black!70}
+]
+\node[source,text width=1.65cm] (audio) at (0,1.1) {audio\\16 kHz mono\\$\leq30$ s};
+\node[source,text width=1.75cm] (mel) at (2.55,1.1) {80-bin\\log-mel};
+\node[shared,text width=2.20cm,minimum height=2.1cm] (encoder) at (5.5,1.1) {Whisper encoder\\\textbf{Base / Small}\\all layers trainable\\no decoder};
+\node[global,text width=2.20cm] (pool) at (8.85,2.5) {final frames:\\mean / min\\max / std\\+ gated layer means};
+\node[temporal,text width=2.20cm] (frames) at (8.85,-0.5) {20-ms frame states\\+ layer features};
+\node[target,text width=2.45cm] (scalars) at (12.5,3.25) {192 scores\\(incl. burst count)\\+ separate CPS};
+\node[target,text width=2.45cm] (speaker) at (12.5,1.65) {Orange vectors\\timbre 128D\\identity 250D};
+\node[target,text width=2.45cm] (occupancy) at (12.5,0.0) {burst occupancy\\+ onset / duration};
+\node[temporal,text width=2.35cm] (local) at (12.5,-1.45) {pool \emph{inside each}\\reference or predicted event};
+\node[target,text width=2.45cm] (classes) at (16.0,-1.45) {53-way burst type\\per event};
+\draw[arr] (audio)--(mel);
+\draw[arr] (mel)--(encoder);
+\draw[arr] (encoder.east) -- ++(.5,0) |- (pool.west);
+\draw[arr] (encoder.east) -- ++(.5,0) |- (frames.west);
+\draw[arr] (pool.east) -- ++(.5,0) |- (scalars.west);
+\draw[arr] (pool.east) -- ++(.5,0) |- (speaker.west);
+\draw[arr] (frames.east) -- ++(.5,0) |- (occupancy.west);
+\draw[arr] (frames.east) -- ++(.5,0) |- (local.west);
+\draw[arr] (occupancy.south) -- (local.north);
+\draw[arr] (local)--(classes);
+\end{tikzpicture}%
+}

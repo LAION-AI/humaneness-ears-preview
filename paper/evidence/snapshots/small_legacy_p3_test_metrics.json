@@ -1,0 +1,1585 @@
+{
+  "loss": 0.5769879598617553,
+  "clips": 2000,
+  "per_score": [
+    {
+      "score": "emo_Affection",
+      "n": 1742,
+      "raw_mae": 0.19865782558918,
+      "normalized_mae": 0.3653566539287567,
+      "pearson": 0.6990402340888977,
+      "spearman": 0.6476249696180015
+    },
+    {
+      "score": "emo_Amusement",
+      "n": 1742,
+      "raw_mae": 0.12921684980392456,
+      "normalized_mae": 0.14892646670341492,
+      "pearson": 0.7788429856300354,
+      "spearman": 0.5850005794522637
+    },
+    {
+      "score": "emo_Anger",
+      "n": 1742,
+      "raw_mae": 0.18483056128025055,
+      "normalized_mae": 0.3185986876487732,
+      "pearson": 0.83405601978302,
+      "spearman": 0.8091028471952547
+    },
+    {
+      "score": "emo_Astonishment_Surprise",
+      "n": 1742,
+      "raw_mae": 0.173195019364357,
+      "normalized_mae": 0.31364649534225464,
+      "pearson": 0.7808321118354797,
+      "spearman": 0.6119851545443398
+    },
+    {
+      "score": "emo_Awe",
+      "n": 1742,
+      "raw_mae": 0.08234761655330658,
+      "normalized_mae": 0.19617247581481934,
+      "pearson": 0.6280730962753296,
+      "spearman": 0.4387585052808903
+    },
+    {
+      "score": "emo_Bitterness",
+      "n": 1742,
+      "raw_mae": 0.11034100502729416,
+      "normalized_mae": 0.2711569368839264,
+      "pearson": 0.7580421566963196,
+      "spearman": 0.6209655358033799
+    },
+    {
+      "score": "emo_Concentration",
+      "n": 1742,
+      "raw_mae": 0.13941816985607147,
+      "normalized_mae": 0.1908314824104309,
+      "pearson": 0.9083161354064941,
+      "spearman": 0.8711334491192984
+    },
+    {
+      "score": "emo_Confusion",
+      "n": 1742,
+      "raw_mae": 0.1543925404548645,
+      "normalized_mae": 0.28944820165634155,
+      "pearson": 0.7329698801040649,
+      "spearman": 0.6728131113179465
+    },
+    {
+      "score": "emo_Contemplation",
+      "n": 1742,
+      "raw_mae": 0.16162534058094025,
+      "normalized_mae": 0.27443185448646545,
+      "pearson": 0.8661180138587952,
+      "spearman": 0.8354146681355332
+    },
+    {
+      "score": "emo_Contempt",
+      "n": 1742,
+      "raw_mae": 0.13092032074928284,
+      "normalized_mae": 0.2902010679244995,
+      "pearson": 0.7719238996505737,
+      "spearman": 0.6951940145488602
+    },
+    {
+      "score": "emo_Contentment",
+      "n": 1742,
+      "raw_mae": 0.15323999524116516,
+      "normalized_mae": 0.304162859916687,
+      "pearson": 0.82076096534729,
+      "spearman": 0.8152740121677817
+    },
+    {
+      "score": "emo_Disappointment",
+      "n": 1742,
+      "raw_mae": 0.16660279035568237,
+      "normalized_mae": 0.237548828125,
+      "pearson": 0.7287365198135376,
+      "spearman": 0.7155376996833944
+    },
+    {
+      "score": "emo_Disgust",
+      "n": 1742,
+      "raw_mae": 0.14636236429214478,
+      "normalized_mae": 0.2985342741012573,
+      "pearson": 0.7337617874145508,
+      "spearman": 0.5350031800266797
+    },
+    {
+      "score": "emo_Distress",
+      "n": 1742,
+      "raw_mae": 0.12413086742162704,
+      "normalized_mae": 0.1518627554178238,
+      "pearson": 0.6802871227264404,
+      "spearman": 0.5938580919040594
+    },
+    {
+      "score": "emo_Doubt",
+      "n": 1742,
+      "raw_mae": 0.11602936685085297,
+      "normalized_mae": 0.24005722999572754,
+      "pearson": 0.642837643623352,
+      "spearman": 0.5248846998541261
+    },
+    {
+      "score": "emo_Elation",
+      "n": 1742,
+      "raw_mae": 0.12694750726222992,
+      "normalized_mae": 0.17669400572776794,
+      "pearson": 0.7625059485435486,
+      "spearman": 0.6257519380083316
+    },
+    {
+      "score": "emo_Embarrassment",
+      "n": 1742,
+      "raw_mae": 0.06874677538871765,
+      "normalized_mae": 0.15729695558547974,
+      "pearson": 0.7865481972694397,
+      "spearman": 0.6572018947155619
+    },
+    {
+      "score": "emo_Emotional_Numbness",
+      "n": 1742,
+      "raw_mae": 0.17609021067619324,
+      "normalized_mae": 0.1831475794315338,
+      "pearson": 0.7561922073364258,
+      "spearman": 0.6734317039344899
+    },
+    {
+      "score": "emo_Fatigue_Exhaustion",
+      "n": 1742,
+      "raw_mae": 0.06882087886333466,
+      "normalized_mae": 0.12725891172885895,
+      "pearson": 0.8215433359146118,
+      "spearman": 0.5596465692342022
+    },
+    {
+      "score": "emo_Fear",
+      "n": 1742,
+      "raw_mae": 0.14210453629493713,
+      "normalized_mae": 0.23229514062404633,
+      "pearson": 0.6517210006713867,
+      "spearman": 0.6456198815503885
+    },
+    {
+      "score": "emo_Helplessness",
+      "n": 1742,
+      "raw_mae": 0.10389982163906097,
+      "normalized_mae": 0.1467389017343521,
+      "pearson": 0.691334068775177,
+      "spearman": 0.6350648703558114
+    },
+    {
+      "score": "emo_Hope_Enthusiasm_Optimism",
+      "n": 1742,
+      "raw_mae": 0.19555146992206573,
+      "normalized_mae": 0.25782284140586853,
+      "pearson": 0.8115716576576233,
+      "spearman": 0.7901880767178406
+    },
+    {
+      "score": "emo_Impatience_and_Irritability",
+      "n": 1742,
+      "raw_mae": 0.18306660652160645,
+      "normalized_mae": 0.2675890624523163,
+      "pearson": 0.84267657995224,
+      "spearman": 0.8115391266340378
+    },
+    {
+      "score": "emo_Infatuation",
+      "n": 1742,
+      "raw_mae": 0.07868455350399017,
+      "normalized_mae": 0.1453797072172165,
+      "pearson": 0.6263051629066467,
+      "spearman": 0.3545649606973527
+    },
+    {
+      "score": "emo_Interest",
+      "n": 1742,
+      "raw_mae": 0.13537007570266724,
+      "normalized_mae": 0.14809133112430573,
+      "pearson": 0.9320794343948364,
+      "spearman": 0.9330241513636447
+    },
+    {
+      "score": "emo_Intoxication_Altered_States_of_Consciousness",
+      "n": 1742,
+      "raw_mae": 0.07881193608045578,
+      "normalized_mae": 0.14169318974018097,
+      "pearson": 0.7802397012710571,
+      "spearman": 0.5007296364657399
+    },
+    {
+      "score": "emo_Jealousy_and_Envy",
+      "n": 1742,
+      "raw_mae": 0.05732060223817825,
+      "normalized_mae": 0.12859073281288147,
+      "pearson": 0.6900206804275513,
+      "spearman": 0.6241530409315182
+    },
+    {
+      "score": "emo_Longing",
+      "n": 1742,
+      "raw_mae": 0.13859765231609344,
+      "normalized_mae": 0.21797876060009003,
+      "pearson": 0.8055803179740906,
+      "spearman": 0.7588719721234197
+    },
+    {
+      "score": "emo_Malevolence_Malice",
+      "n": 1742,
+      "raw_mae": 0.15488176047801971,
+      "normalized_mae": 0.2957537770271301,
+      "pearson": 0.7764505743980408,
+      "spearman": 0.6797069486701186
+    },
+    {
+      "score": "emo_Pain",
+      "n": 1742,
+      "raw_mae": 0.0595163032412529,
+      "normalized_mae": 0.10347573459148407,
+      "pearson": 0.6303707361221313,
+      "spearman": 0.35003225226113305
+    },
+    {
+      "score": "emo_Pleasure_Ecstasy",
+      "n": 1742,
+      "raw_mae": 0.10220620036125183,
+      "normalized_mae": 0.16740559041500092,
+      "pearson": 0.7742440700531006,
+      "spearman": 0.6854072996304306
+    },
+    {
+      "score": "emo_Pride",
+      "n": 1742,
+      "raw_mae": 0.1730748414993286,
+      "normalized_mae": 0.3328925371170044,
+      "pearson": 0.7365930080413818,
+      "spearman": 0.6573490983619752
+    },
+    {
+      "score": "emo_Relief",
+      "n": 1742,
+      "raw_mae": 0.17869681119918823,
+      "normalized_mae": 0.25604870915412903,
+      "pearson": 0.6738123297691345,
+      "spearman": 0.581536989851899
+    },
+    {
+      "score": "emo_Sadness",
+      "n": 1742,
+      "raw_mae": 0.13863755762577057,
+      "normalized_mae": 0.18139082193374634,
+      "pearson": 0.7621126174926758,
+      "spearman": 0.38403513446990456
+    },
+    {
+      "score": "emo_Sexual_Lust",
+      "n": 1742,
+      "raw_mae": 0.09083559364080429,
+      "normalized_mae": 0.18249809741973877,
+      "pearson": 0.8021007180213928,
+      "spearman": 0.6989825138396607
+    },
+    {
+      "score": "emo_Shame",
+      "n": 1742,
+      "raw_mae": 0.07945767790079117,
+      "normalized_mae": 0.15163058042526245,
+      "pearson": 0.7252542972564697,
+      "spearman": 0.6317251614290376
+    },
+    {
+      "score": "emo_Sourness",
+      "n": 1742,
+      "raw_mae": 0.131769061088562,
+      "normalized_mae": 0.3047633171081543,
+      "pearson": 0.7209816575050354,
+      "spearman": 0.43859565660748695
+    },
+    {
+      "score": "emo_Teasing",
+      "n": 1742,
+      "raw_mae": 0.1382559984922409,
+      "normalized_mae": 0.2569746971130371,
+      "pearson": 0.7941195368766785,
+      "spearman": 0.7156717288641443
+    },
+    {
+      "score": "emo_Thankfulness_Gratitude",
+      "n": 1742,
+      "raw_mae": 0.22018016874790192,
+      "normalized_mae": 0.31850719451904297,
+      "pearson": 0.6435871124267578,
+      "spearman": 0.5142768193250553
+    },
+    {
+      "score": "emo_Triumph",
+      "n": 1742,
+      "raw_mae": 0.13460633158683777,
+      "normalized_mae": 0.25492843985557556,
+      "pearson": 0.7436307668685913,
+      "spearman": 0.5637067430152741
+    },
+    {
+      "score": "vn_AGEV_reg",
+      "n": 1742,
+      "raw_mae": 0.28132364153862,
+      "normalized_mae": 0.22327545285224915,
+      "pearson": 0.9483950138092041,
+      "spearman": 0.9429924974604812
+    },
+    {
+      "score": "vn_AROU_reg",
+      "n": 1742,
+      "raw_mae": 0.20285023748874664,
+      "normalized_mae": 0.18006649613380432,
+      "pearson": 0.9422223567962646,
+      "spearman": 0.9399266571449901
+    },
+    {
+      "score": "vn_ARSH_reg",
+      "n": 1742,
+      "raw_mae": 0.22028857469558716,
+      "normalized_mae": 0.2513878643512726,
+      "pearson": 0.9239288568496704,
+      "spearman": 0.9218138992574327
+    },
+    {
+      "score": "vn_ATCK_reg",
+      "n": 1742,
+      "raw_mae": 0.2104627788066864,
+      "normalized_mae": 0.15983670949935913,
+      "pearson": 0.9522049427032471,
+      "spearman": 0.9543749839420671
+    },
+    {
+      "score": "vn_BKGN_reg",
+      "n": 1742,
+      "raw_mae": 0.1686088591814041,
+      "normalized_mae": 0.22282244265079498,
+      "pearson": 0.9468652606010437,
+      "spearman": 0.9411533570856463
+    },
+    {
+      "score": "vn_BRGT_reg",
+      "n": 1742,
+      "raw_mae": 0.1687697172164917,
+      "normalized_mae": 0.2082018256187439,
+      "pearson": 0.9567763805389404,
+      "spearman": 0.9568338833574792
+    },
+    {
+      "score": "vn_CHNK_reg",
+      "n": 1742,
+      "raw_mae": 0.21462520956993103,
+      "normalized_mae": 0.17218133807182312,
+      "pearson": 0.9583144783973694,
+      "spearman": 0.9588808867955544
+    },
+    {
+      "score": "vn_CLRT_reg",
+      "n": 1742,
+      "raw_mae": 0.21800360083580017,
+      "normalized_mae": 0.2268710732460022,
+      "pearson": 0.9609716534614563,
+      "spearman": 0.9594341508545022
+    },
+    {
+      "score": "vn_COGL_reg",
+      "n": 1742,
+      "raw_mae": 0.23729759454727173,
+      "normalized_mae": 0.22509682178497314,
+      "pearson": 0.9301872253417969,
+      "spearman": 0.9253854667001236
+    },
+    {
+      "score": "vn_DARC_reg",
+      "n": 1742,
+      "raw_mae": 0.23356746137142181,
+      "normalized_mae": 0.17146988213062286,
+      "pearson": 0.9423239231109619,
+      "spearman": 0.9372367474470062
+    },
+    {
+      "score": "vn_DFLU_reg",
+      "n": 1742,
+      "raw_mae": 0.24725787341594696,
+      "normalized_mae": 0.20933423936367035,
+      "pearson": 0.953779935836792,
+      "spearman": 0.949318687149826
+    },
+    {
+      "score": "vn_EMPH_reg",
+      "n": 1742,
+      "raw_mae": 0.22319483757019043,
+      "normalized_mae": 0.14205607771873474,
+      "pearson": 0.9591934680938721,
+      "spearman": 0.9581722915810397
+    },
+    {
+      "score": "vn_ESTH_reg",
+      "n": 1742,
+      "raw_mae": 0.16016662120819092,
+      "normalized_mae": 0.20568227767944336,
+      "pearson": 0.9400377869606018,
+      "spearman": 0.9357263891842694
+    },
+    {
+      "score": "vn_EXPL_reg",
+      "n": 1742,
+      "raw_mae": 0.07237241417169571,
+      "normalized_mae": 0.22101804614067078,
+      "pearson": 0.9264400005340576,
+      "spearman": 0.9294019579676547
+    },
+    {
+      "score": "vn_FOCS_reg",
+      "n": 1742,
+      "raw_mae": 0.2966078519821167,
+      "normalized_mae": 0.26724886894226074,
+      "pearson": 0.9210962653160095,
+      "spearman": 0.9181660351642492
+    },
+    {
+      "score": "vn_FULL_reg",
+      "n": 1742,
+      "raw_mae": 0.21280445158481598,
+      "normalized_mae": 0.24081829190254211,
+      "pearson": 0.9294964075088501,
+      "spearman": 0.9228543528593547
+    },
+    {
+      "score": "vn_GEND_reg",
+      "n": 1742,
+      "raw_mae": 0.2680663764476776,
+      "normalized_mae": 0.1683308333158493,
+      "pearson": 0.979525625705719,
+      "spearman": 0.975994039160994
+    },
+    {
+      "score": "vn_HARM_reg",
+      "n": 1742,
+      "raw_mae": 0.1829618215560913,
+      "normalized_mae": 0.22098809480667114,
+      "pearson": 0.9394338726997375,
+      "spearman": 0.9313755369196068
+    },
+    {
+      "score": "vn_METL_reg",
+      "n": 1742,
+      "raw_mae": 0.18511702120304108,
+      "normalized_mae": 0.19330339133739471,
+      "pearson": 0.9397497177124023,
+      "spearman": 0.9359821257460038
+    },
+    {
+      "score": "vn_RANG_reg",
+      "n": 1742,
+      "raw_mae": 0.20417693257331848,
+      "normalized_mae": 0.22902384400367737,
+      "pearson": 0.9520573019981384,
+      "spearman": 0.9485830424078987
+    },
+    {
+      "score": "vn_RCQL_reg",
+      "n": 1742,
+      "raw_mae": 0.16653487086296082,
+      "normalized_mae": 0.18499566614627838,
+      "pearson": 0.965213418006897,
+      "spearman": 0.9638044547707348
+    },
+    {
+      "score": "vn_REGS_reg",
+      "n": 1742,
+      "raw_mae": 0.19038982689380646,
+      "normalized_mae": 0.15156154334545135,
+      "pearson": 0.9812498688697815,
+      "spearman": 0.9746756748939474
+    },
+    {
+      "score": "vn_RESP_reg",
+      "n": 1742,
+      "raw_mae": 0.2214178889989853,
+      "normalized_mae": 0.20702199637889862,
+      "pearson": 0.9526515007019043,
+      "spearman": 0.9496361941841662
+    },
+    {
+      "score": "vn_ROUG_reg",
+      "n": 1742,
+      "raw_mae": 0.1986534148454666,
+      "normalized_mae": 0.22530490159988403,
+      "pearson": 0.9426535367965698,
+      "spearman": 0.9371938168203288
+    },
+    {
+      "score": "vn_R_CHST_reg",
+      "n": 1742,
+      "raw_mae": 0.17470350861549377,
+      "normalized_mae": 0.20576712489128113,
+      "pearson": 0.9566629528999329,
+      "spearman": 0.9588807426541017
+    },
+    {
+      "score": "vn_R_HEAD_reg",
+      "n": 1742,
+      "raw_mae": 0.16974134743213654,
+      "normalized_mae": 0.20610523223876953,
+      "pearson": 0.946857213973999,
+      "spearman": 0.945887441014447
+    },
+    {
+      "score": "vn_R_MASK_reg",
+      "n": 1742,
+      "raw_mae": 0.1888275146484375,
+      "normalized_mae": 0.18451058864593506,
+      "pearson": 0.9674941897392273,
+      "spearman": 0.9665820466564566
+    },
+    {
+      "score": "vn_R_MIXD_reg",
+      "n": 1742,
+      "raw_mae": 0.19480761885643005,
+      "normalized_mae": 0.23278331756591797,
+      "pearson": 0.9521944522857666,
+      "spearman": 0.9480757844803095
+    },
+    {
+      "score": "vn_R_NASL_reg",
+      "n": 1742,
+      "raw_mae": 0.20945854485034943,
+      "normalized_mae": 0.19833217561244965,
+      "pearson": 0.9437882304191589,
+      "spearman": 0.9342014757448013
+    },
+    {
+      "score": "vn_R_ORAL_reg",
+      "n": 1742,
+      "raw_mae": 0.15869197249412537,
+      "normalized_mae": 0.21326857805252075,
+      "pearson": 0.9423278570175171,
+      "spearman": 0.9378982649937294
+    },
+    {
+      "score": "vn_R_THRT_reg",
+      "n": 1742,
+      "raw_mae": 0.18447135388851166,
+      "normalized_mae": 0.22907857596874237,
+      "pearson": 0.9380954504013062,
+      "spearman": 0.9348882146383811
+    },
+    {
+      "score": "vn_SMTH_reg",
+      "n": 1742,
+      "raw_mae": 0.19040293991565704,
+      "normalized_mae": 0.17132247984409332,
+      "pearson": 0.9559152126312256,
+      "spearman": 0.9559850384871503
+    },
+    {
+      "score": "vn_STNC_reg",
+      "n": 1742,
+      "raw_mae": 0.2078624665737152,
+      "normalized_mae": 0.18255114555358887,
+      "pearson": 0.9339388608932495,
+      "spearman": 0.9261588955500535
+    },
+    {
+      "score": "vn_STRU_reg",
+      "n": 1742,
+      "raw_mae": 0.15995225310325623,
+      "normalized_mae": 0.16221129894256592,
+      "pearson": 0.9666603803634644,
+      "spearman": 0.9619552448770423
+    },
+    {
+      "score": "vn_S_ASMR_reg",
+      "n": 1742,
+      "raw_mae": 0.2891671657562256,
+      "normalized_mae": 0.2097364217042923,
+      "pearson": 0.9417967796325684,
+      "spearman": 0.932078737953954
+    },
+    {
+      "score": "vn_S_AUTH_reg",
+      "n": 1742,
+      "raw_mae": 0.23335103690624237,
+      "normalized_mae": 0.22461850941181183,
+      "pearson": 0.9547699689865112,
+      "spearman": 0.9495220636774552
+    },
+    {
+      "score": "vn_S_CART_reg",
+      "n": 1742,
+      "raw_mae": 0.3136797547340393,
+      "normalized_mae": 0.22909826040267944,
+      "pearson": 0.9481935501098633,
+      "spearman": 0.9431196628764252
+    },
+    {
+      "score": "vn_S_CASU_reg",
+      "n": 1742,
+      "raw_mae": 0.32781729102134705,
+      "normalized_mae": 0.25693053007125854,
+      "pearson": 0.9610517024993896,
+      "spearman": 0.9591882707182977
+    },
+    {
+      "score": "vn_S_CONV_reg",
+      "n": 1742,
+      "raw_mae": 0.3080653250217438,
+      "normalized_mae": 0.23600201308727264,
+      "pearson": 0.9450485706329346,
+      "spearman": 0.9396664034791447
+    },
+    {
+      "score": "vn_S_DRAM_reg",
+      "n": 1742,
+      "raw_mae": 0.266794890165329,
+      "normalized_mae": 0.23417162895202637,
+      "pearson": 0.9447850584983826,
+      "spearman": 0.9424439167559459
+    },
+    {
+      "score": "vn_S_FORM_reg",
+      "n": 1742,
+      "raw_mae": 0.2272311896085739,
+      "normalized_mae": 0.2253526896238327,
+      "pearson": 0.9588177800178528,
+      "spearman": 0.9553580968472105
+    },
+    {
+      "score": "vn_S_MONO_reg",
+      "n": 1742,
+      "raw_mae": 0.2244713306427002,
+      "normalized_mae": 0.17642779648303986,
+      "pearson": 0.9647935032844543,
+      "spearman": 0.9620532373133768
+    },
+    {
+      "score": "vn_S_NARR_reg",
+      "n": 1742,
+      "raw_mae": 0.29225417971611023,
+      "normalized_mae": 0.20362789928913116,
+      "pearson": 0.9588947892189026,
+      "spearman": 0.9588995490046199
+    },
+    {
+      "score": "vn_S_NEWS_reg",
+      "n": 1742,
+      "raw_mae": 0.1712966114282608,
+      "normalized_mae": 0.3108804225921631,
+      "pearson": 0.9599993228912354,
+      "spearman": 0.9345154232514443
+    },
+    {
+      "score": "vn_S_PLAY_reg",
+      "n": 1742,
+      "raw_mae": 0.2669171392917633,
+      "normalized_mae": 0.2053210437297821,
+      "pearson": 0.9553214311599731,
+      "spearman": 0.9534218956007742
+    },
+    {
+      "score": "vn_S_RANT_reg",
+      "n": 1742,
+      "raw_mae": 0.2596393823623657,
+      "normalized_mae": 0.20348888635635376,
+      "pearson": 0.9445745944976807,
+      "spearman": 0.93503961850613
+    },
+    {
+      "score": "vn_S_STRY_reg",
+      "n": 1742,
+      "raw_mae": 0.3451790511608124,
+      "normalized_mae": 0.24767889082431793,
+      "pearson": 0.9351444244384766,
+      "spearman": 0.9318758282130698
+    },
+    {
+      "score": "vn_S_TECH_reg",
+      "n": 1742,
+      "raw_mae": 0.3202354907989502,
+      "normalized_mae": 0.26293331384658813,
+      "pearson": 0.9456151127815247,
+      "spearman": 0.9453298506782091
+    },
+    {
+      "score": "vn_S_WHIS_reg",
+      "n": 1742,
+      "raw_mae": 0.3154890239238739,
+      "normalized_mae": 0.19734568893909454,
+      "pearson": 0.9513322114944458,
+      "spearman": 0.9448855666741707
+    },
+    {
+      "score": "vn_TEMP_reg",
+      "n": 1742,
+      "raw_mae": 0.19347964227199554,
+      "normalized_mae": 0.16114434599876404,
+      "pearson": 0.9664137363433838,
+      "spearman": 0.9654111800530694
+    },
+    {
+      "score": "vn_TENS_reg",
+      "n": 1742,
+      "raw_mae": 0.19178156554698944,
+      "normalized_mae": 0.23042936623096466,
+      "pearson": 0.9406450986862183,
+      "spearman": 0.9366571346759894
+    },
+    {
+      "score": "vn_VALN_reg",
+      "n": 1742,
+      "raw_mae": 0.21980628371238708,
+      "normalized_mae": 0.19453991949558258,
+      "pearson": 0.9247700572013855,
+      "spearman": 0.9062629952848653
+    },
+    {
+      "score": "vn_VALS_reg",
+      "n": 1742,
+      "raw_mae": 0.21211546659469604,
+      "normalized_mae": 0.19313107430934906,
+      "pearson": 0.936401903629303,
+      "spearman": 0.938003256227796
+    },
+    {
+      "score": "vn_VFLX_reg",
+      "n": 1742,
+      "raw_mae": 0.2190989851951599,
+      "normalized_mae": 0.1815580129623413,
+      "pearson": 0.9624212980270386,
+      "spearman": 0.9617352297019177
+    },
+    {
+      "score": "vn_VOLT_reg",
+      "n": 1742,
+      "raw_mae": 0.19844721257686615,
+      "normalized_mae": 0.22850556671619415,
+      "pearson": 0.971232533454895,
+      "spearman": 0.9708331164163994
+    },
+    {
+      "score": "vn_VULN_reg",
+      "n": 1742,
+      "raw_mae": 0.22478005290031433,
+      "normalized_mae": 0.226930633187294,
+      "pearson": 0.9299910664558411,
+      "spearman": 0.9188390638184724
+    },
+    {
+      "score": "vn_WARM_reg",
+      "n": 1742,
+      "raw_mae": 0.17713284492492676,
+      "normalized_mae": 0.19575831294059753,
+      "pearson": 0.9369972944259644,
+      "spearman": 0.931218982494669
+    },
+    {
+      "score": "genuineness_0_6",
+      "n": 1742,
+      "raw_mae": 0.2877351939678192,
+      "normalized_mae": 0.17908835411071777,
+      "pearson": 0.9619103670120239,
+      "spearman": 0.9637728545859575
+    },
+    {
+      "score": "blend_0_10",
+      "n": 846,
+      "raw_mae": 0.5919053554534912,
+      "normalized_mae": 0.21777456998825073,
+      "pearson": 0.9404394030570984,
+      "spearman": 0.9370297209037823
+    },
+    {
+      "score": "R_quality",
+      "n": 0,
+      "raw_mae": null,
+      "normalized_mae": null,
+      "pearson": null,
+      "spearman": null
+    },
+    {
+      "score": "eiv_extra:Age",
+      "n": 1742,
+      "raw_mae": 0.10160931944847107,
+      "normalized_mae": 0.3444328308105469,
+      "pearson": 0.8163979053497314,
+      "spearman": 0.7856323077412692
+    },
+    {
+      "score": "eiv_extra:Arousal",
+      "n": 1742,
+      "raw_mae": 0.14320158958435059,
+      "normalized_mae": 0.3284580409526825,
+      "pearson": 0.8909086585044861,
+      "spearman": 0.8965201276320706
+    },
+    {
+      "score": "eiv_extra:Authenticity",
+      "n": 1742,
+      "raw_mae": 0.06247836351394653,
+      "normalized_mae": 0.24991345405578613,
+      "pearson": 0.8579374551773071,
+      "spearman": 0.8478653346931636
+    },
+    {
+      "score": "eiv_extra:Background_Noise",
+      "n": 1742,
+      "raw_mae": 0.07963187247514725,
+      "normalized_mae": 0.30169743299484253,
+      "pearson": 0.89518803358078,
+      "spearman": 0.8806919982871204
+    },
+    {
+      "score": "eiv_extra:Confident_vs._Hesitant",
+      "n": 1742,
+      "raw_mae": 0.1105995923280716,
+      "normalized_mae": 0.363684743642807,
+      "pearson": 0.8919588327407837,
+      "spearman": 0.868547538060919
+    },
+    {
+      "score": "eiv_extra:Gender",
+      "n": 1742,
+      "raw_mae": 0.189041867852211,
+      "normalized_mae": 0.18953858315944672,
+      "pearson": 0.9613934755325317,
+      "spearman": 0.9479735619541775
+    },
+    {
+      "score": "eiv_extra:High-Pitched_vs._Low-Pitched",
+      "n": 1742,
+      "raw_mae": 0.060619380325078964,
+      "normalized_mae": 0.24247752130031586,
+      "pearson": 0.948053240776062,
+      "spearman": 0.9447675312349845
+    },
+    {
+      "score": "eiv_extra:Monotone_vs._Expressive",
+      "n": 1742,
+      "raw_mae": 0.12099462747573853,
+      "normalized_mae": 0.2573053538799286,
+      "pearson": 0.9449849724769592,
+      "spearman": 0.9448574063554386
+    },
+    {
+      "score": "eiv_extra:Recording_Quality",
+      "n": 1742,
+      "raw_mae": 0.09649788588285446,
+      "normalized_mae": 0.29015052318573,
+      "pearson": 0.9360582828521729,
+      "spearman": 0.9355725209408381
+    },
+    {
+      "score": "eiv_extra:Serious_vs._Humorous",
+      "n": 1742,
+      "raw_mae": 0.15312527120113373,
+      "normalized_mae": 0.44916465878486633,
+      "pearson": 0.8057898283004761,
+      "spearman": 0.7866148832243182
+    },
+    {
+      "score": "eiv_extra:Soft_vs._Harsh",
+      "n": 1742,
+      "raw_mae": 0.14453187584877014,
+      "normalized_mae": 0.4524993598461151,
+      "pearson": 0.8119075298309326,
+      "spearman": 0.805657191494334
+    },
+    {
+      "score": "eiv_extra:Submissive_vs._Dominant",
+      "n": 1742,
+      "raw_mae": 0.12499295920133591,
+      "normalized_mae": 0.38679829239845276,
+      "pearson": 0.8606163263320923,
+      "spearman": 0.860355309177001
+    },
+    {
+      "score": "eiv_extra:Valence",
+      "n": 1742,
+      "raw_mae": 0.13747437298297882,
+      "normalized_mae": 0.3602308928966522,
+      "pearson": 0.6971417665481567,
+      "spearman": 0.5167050313345756
+    },
+    {
+      "score": "eiv_extra:Vulnerable_vs._Emotionally_Detached",
+      "n": 1742,
+      "raw_mae": 0.13841162621974945,
+      "normalized_mae": 0.31759941577911377,
+      "pearson": 0.9139939546585083,
+      "spearman": 0.9119381690868202
+    },
+    {
+      "score": "eiv_extra:Warm_vs._Cold",
+      "n": 1742,
+      "raw_mae": 0.12352550029754639,
+      "normalized_mae": 0.4118586480617523,
+      "pearson": 0.793372392654419,
+      "spearman": 0.7388037180967094
+    },
+    {
+      "score": "eiv_extra:score_background_quality",
+      "n": 1742,
+      "raw_mae": 0.09690849483013153,
+      "normalized_mae": 0.13971951603889465,
+      "pearson": 0.9828308820724487,
+      "spearman": 0.9805743792395372
+    },
+    {
+      "score": "eiv_extra:score_content_enjoyment",
+      "n": 1742,
+      "raw_mae": 0.06838838756084442,
+      "normalized_mae": 0.22513414919376373,
+      "pearson": 0.9603355526924133,
+      "spearman": 0.9584427320795641
+    },
+    {
+      "score": "eiv_extra:score_overall_quality",
+      "n": 1742,
+      "raw_mae": 0.08027306944131851,
+      "normalized_mae": 0.15816114842891693,
+      "pearson": 0.9779442548751831,
+      "spearman": 0.9785195050794909
+    },
+    {
+      "score": "eiv_extra:score_speech_quality",
+      "n": 1742,
+      "raw_mae": 0.04003698751330376,
+      "normalized_mae": 0.16014795005321503,
+      "pearson": 0.9381333589553833,
+      "spearman": 0.9291136531489269
+    },
+    {
+      "score": "audiobox:CE",
+      "n": 2000,
+      "raw_mae": 0.18193383514881134,
+      "normalized_mae": 0.178952157497406,
+      "pearson": 0.9708977937698364,
+      "spearman": 0.9690069342500494
+    },
+    {
+      "score": "audiobox:CU",
+      "n": 2000,
+      "raw_mae": 0.23251591622829437,
+      "normalized_mae": 0.23277559876441956,
+      "pearson": 0.9474483728408813,
+      "spearman": 0.9395078914213376
+    },
+    {
+      "score": "audiobox:PC",
+      "n": 2000,
+      "raw_mae": 0.1797674298286438,
+      "normalized_mae": 0.11127754300832748,
+      "pearson": 0.985214352607727,
+      "spearman": 0.9810177198990591
+    },
+    {
+      "score": "audiobox:PQ",
+      "n": 2000,
+      "raw_mae": 0.19874867796897888,
+      "normalized_mae": 0.22603867948055267,
+      "pearson": 0.948110818862915,
+      "spearman": 0.94475080232776
+    },
+    {
+      "score": "dnsmos:SIG_raw",
+      "n": 1742,
+      "raw_mae": 0.19388331472873688,
+      "normalized_mae": 0.2897796332836151,
+      "pearson": 0.8649864196777344,
+      "spearman": 0.8280587710261008
+    },
+    {
+      "score": "dnsmos:BAK_raw",
+      "n": 1742,
+      "raw_mae": 0.20732034742832184,
+      "normalized_mae": 0.18424449861049652,
+      "pearson": 0.9652565717697144,
+      "spearman": 0.959632300075023
+    },
+    {
+      "score": "dnsmos:OVRL_raw",
+      "n": 1742,
+      "raw_mae": 0.18186528980731964,
+      "normalized_mae": 0.22369931638240814,
+      "pearson": 0.9520745277404785,
+      "spearman": 0.9524375748125028
+    },
+    {
+      "score": "dnsmos:SIG",
+      "n": 1742,
+      "raw_mae": 0.1319500207901001,
+      "normalized_mae": 0.2632996141910553,
+      "pearson": 0.8619747757911682,
+      "spearman": 0.8265007209340584
+    },
+    {
+      "score": "dnsmos:BAK",
+      "n": 1742,
+      "raw_mae": 0.17237423360347748,
+      "normalized_mae": 0.18563467264175415,
+      "pearson": 0.9623048305511475,
+      "spearman": 0.9586554880394874
+    },
+    {
+      "score": "dnsmos:OVRL",
+      "n": 1742,
+      "raw_mae": 0.13415588438510895,
+      "normalized_mae": 0.22114050388336182,
+      "pearson": 0.9494444727897644,
+      "spearman": 0.9525100113877888
+    },
+    {
+      "score": "dnsmos:P808_MOS",
+      "n": 1742,
+      "raw_mae": 0.10298866778612137,
+      "normalized_mae": 0.20746102929115295,
+      "pearson": 0.9645638465881348,
+      "spearman": 0.964833504199358
+    },
+    {
+      "score": "burst_count_log1p",
+      "n": 2000,
+      "raw_mae": 0.0309528186917305,
+      "normalized_mae": 0.04772834852337837,
+      "pearson": 0.9935138821601868,
+      "spearman": 0.926828458836641
+    },
+    {
+      "score": "voiceclap_attribute:Affection",
+      "n": 1742,
+      "raw_mae": 0.17114736139774323,
+      "normalized_mae": 0.30864813923835754,
+      "pearson": 0.907333493232727,
+      "spearman": 0.9041423884410963
+    },
+    {
+      "score": "voiceclap_attribute:Age",
+      "n": 1742,
+      "raw_mae": 0.14463043212890625,
+      "normalized_mae": 0.2659865617752075,
+      "pearson": 0.8894510865211487,
+      "spearman": 0.9100162596195953
+    },
+    {
+      "score": "voiceclap_attribute:Amusement",
+      "n": 1742,
+      "raw_mae": 0.13437563180923462,
+      "normalized_mae": 0.23414592444896698,
+      "pearson": 0.9364675283432007,
+      "spearman": 0.9378247481929785
+    },
+    {
+      "score": "voiceclap_attribute:Anger",
+      "n": 1742,
+      "raw_mae": 0.16780799627304077,
+      "normalized_mae": 0.33074018359184265,
+      "pearson": 0.896811842918396,
+      "spearman": 0.8974913356041077
+    },
+    {
+      "score": "voiceclap_attribute:Arousal",
+      "n": 1742,
+      "raw_mae": 0.17875318229198456,
+      "normalized_mae": 0.28710830211639404,
+      "pearson": 0.9218189120292664,
+      "spearman": 0.9248076288703602
+    },
+    {
+      "score": "voiceclap_attribute:Astonishment_Surprise",
+      "n": 1742,
+      "raw_mae": 0.13850562274456024,
+      "normalized_mae": 0.2892341613769531,
+      "pearson": 0.909272313117981,
+      "spearman": 0.9177751770509778
+    },
+    {
+      "score": "voiceclap_attribute:Authenticity",
+      "n": 1742,
+      "raw_mae": 0.050660427659749985,
+      "normalized_mae": 0.20264171063899994,
+      "pearson": 0.9139670133590698,
+      "spearman": 0.9125162458669673
+    },
+    {
+      "score": "voiceclap_attribute:Awe",
+      "n": 1742,
+      "raw_mae": 0.11199449747800827,
+      "normalized_mae": 0.4317271113395691,
+      "pearson": 0.8187893629074097,
+      "spearman": 0.8255805346731497
+    },
+    {
+      "score": "voiceclap_attribute:Background_Noise",
+      "n": 1742,
+      "raw_mae": 0.057911600917577744,
+      "normalized_mae": 0.2192787528038025,
+      "pearson": 0.9592510461807251,
+      "spearman": 0.9594459192030714
+    },
+    {
+      "score": "voiceclap_attribute:Bitterness",
+      "n": 1742,
+      "raw_mae": 0.07430422306060791,
+      "normalized_mae": 0.29721689224243164,
+      "pearson": 0.9103644490242004,
+      "spearman": 0.9062598108177715
+    },
+    {
+      "score": "voiceclap_attribute:Concentration",
+      "n": 1742,
+      "raw_mae": 0.12266318500041962,
+      "normalized_mae": 0.23121854662895203,
+      "pearson": 0.9528611302375793,
+      "spearman": 0.9515008125296605
+    },
+    {
+      "score": "voiceclap_attribute:Confident_vs._Hesitant",
+      "n": 1742,
+      "raw_mae": 0.14650529623031616,
+      "normalized_mae": 0.31252047419548035,
+      "pearson": 0.9018071889877319,
+      "spearman": 0.9200065835244714
+    },
+    {
+      "score": "voiceclap_attribute:Confusion",
+      "n": 1742,
+      "raw_mae": 0.11538499593734741,
+      "normalized_mae": 0.34421437978744507,
+      "pearson": 0.8765053749084473,
+      "spearman": 0.8875275634195232
+    },
+    {
+      "score": "voiceclap_attribute:Contemplation",
+      "n": 1742,
+      "raw_mae": 0.12185163050889969,
+      "normalized_mae": 0.30061352252960205,
+      "pearson": 0.9151526689529419,
+      "spearman": 0.9193567647760778
+    },
+    {
+      "score": "voiceclap_attribute:Contempt",
+      "n": 1742,
+      "raw_mae": 0.11376430839300156,
+      "normalized_mae": 0.3349028527736664,
+      "pearson": 0.9036829471588135,
+      "spearman": 0.9006723110201336
+    },
+    {
+      "score": "voiceclap_attribute:Contentment",
+      "n": 1742,
+      "raw_mae": 0.1125294417142868,
+      "normalized_mae": 0.36659955978393555,
+      "pearson": 0.8567951917648315,
+      "spearman": 0.8728446634531855
+    },
+    {
+      "score": "voiceclap_attribute:Disappointment",
+      "n": 1742,
+      "raw_mae": 0.09541970491409302,
+      "normalized_mae": 0.328432559967041,
+      "pearson": 0.90716153383255,
+      "spearman": 0.9080226677752089
+    },
+    {
+      "score": "voiceclap_attribute:Disgust",
+      "n": 1742,
+      "raw_mae": 0.07682869583368301,
+      "normalized_mae": 0.30731478333473206,
+      "pearson": 0.8723703026771545,
+      "spearman": 0.8682085937992378
+    },
+    {
+      "score": "voiceclap_attribute:Distress",
+      "n": 1742,
+      "raw_mae": 0.13038630783557892,
+      "normalized_mae": 0.3725655674934387,
+      "pearson": 0.8820548057556152,
+      "spearman": 0.8753991672686436
+    },
+    {
+      "score": "voiceclap_attribute:Doubt",
+      "n": 1742,
+      "raw_mae": 0.07533442974090576,
+      "normalized_mae": 0.30133771896362305,
+      "pearson": 0.844477117061615,
+      "spearman": 0.8494601712301367
+    },
+    {
+      "score": "voiceclap_attribute:Elation",
+      "n": 1742,
+      "raw_mae": 0.11714828014373779,
+      "normalized_mae": 0.29379817843437195,
+      "pearson": 0.9022530317306519,
+      "spearman": 0.9121433443685867
+    },
+    {
+      "score": "voiceclap_attribute:Embarrassment",
+      "n": 1742,
+      "raw_mae": 0.09782940149307251,
+      "normalized_mae": 0.3108516335487366,
+      "pearson": 0.9013887643814087,
+      "spearman": 0.905827913369149
+    },
+    {
+      "score": "voiceclap_attribute:Emotional_Numbness",
+      "n": 1742,
+      "raw_mae": 0.08505221456289291,
+      "normalized_mae": 0.3195304274559021,
+      "pearson": 0.9011420011520386,
+      "spearman": 0.8982918198939448
+    },
+    {
+      "score": "voiceclap_attribute:Fatigue_Exhaustion",
+      "n": 1742,
+      "raw_mae": 0.09282456338405609,
+      "normalized_mae": 0.35658594965934753,
+      "pearson": 0.8639324903488159,
+      "spearman": 0.8815865024400475
+    },
+    {
+      "score": "voiceclap_attribute:Fear",
+      "n": 1742,
+      "raw_mae": 0.07336851209402084,
+      "normalized_mae": 0.2934740483760834,
+      "pearson": 0.8961527347564697,
+      "spearman": 0.8920947889195149
+    },
+    {
+      "score": "voiceclap_attribute:Gender",
+      "n": 1742,
+      "raw_mae": 0.1774839460849762,
+      "normalized_mae": 0.1766698807477951,
+      "pearson": 0.9734945893287659,
+      "spearman": 0.9664473818904402
+    },
+    {
+      "score": "voiceclap_attribute:Helplessness",
+      "n": 1742,
+      "raw_mae": 0.09773648530244827,
+      "normalized_mae": 0.3643215596675873,
+      "pearson": 0.8832308650016785,
+      "spearman": 0.8816714065011385
+    },
+    {
+      "score": "voiceclap_attribute:High-Pitched_vs._Low-Pitched",
+      "n": 1742,
+      "raw_mae": 0.08464167267084122,
+      "normalized_mae": 0.22659872472286224,
+      "pearson": 0.9525469541549683,
+      "spearman": 0.9543840900040937
+    },
+    {
+      "score": "voiceclap_attribute:Hope_Enthusiasm_Optimism",
+      "n": 1742,
+      "raw_mae": 0.11161059886217117,
+      "normalized_mae": 0.2809244990348816,
+      "pearson": 0.9114218354225159,
+      "spearman": 0.908344268200391
+    },
+    {
+      "score": "voiceclap_attribute:Impatience_and_Irritability",
+      "n": 1742,
+      "raw_mae": 0.18098220229148865,
+      "normalized_mae": 0.33389726281166077,
+      "pearson": 0.8943501710891724,
+      "spearman": 0.898273356719916
+    },
+    {
+      "score": "voiceclap_attribute:Infatuation",
+      "n": 1742,
+      "raw_mae": 0.10497346520423889,
+      "normalized_mae": 0.31560972332954407,
+      "pearson": 0.909469485282898,
+      "spearman": 0.9074989688654007
+    },
+    {
+      "score": "voiceclap_attribute:Interest",
+      "n": 1742,
+      "raw_mae": 0.09360712766647339,
+      "normalized_mae": 0.21306581795215607,
+      "pearson": 0.9579031467437744,
+      "spearman": 0.9575442127679773
+    },
+    {
+      "score": "voiceclap_attribute:Intoxication_Altered_States_of_Consciousness",
+      "n": 1742,
+      "raw_mae": 0.14034989476203918,
+      "normalized_mae": 0.3024980425834656,
+      "pearson": 0.904698371887207,
+      "spearman": 0.9219552468022963
+    },
+    {
+      "score": "voiceclap_attribute:Jealousy_&_Envy",
+      "n": 1742,
+      "raw_mae": 0.08301534503698349,
+      "normalized_mae": 0.33206138014793396,
+      "pearson": 0.9026718139648438,
+      "spearman": 0.9006974107487317
+    },
+    {
+      "score": "voiceclap_attribute:Longing",
+      "n": 1742,
+      "raw_mae": 0.07405121624469757,
+      "normalized_mae": 0.2962048649787903,
+      "pearson": 0.8965198993682861,
+      "spearman": 0.8923044609285032
+    },
+    {
+      "score": "voiceclap_attribute:Malevolence_Malice",
+      "n": 1742,
+      "raw_mae": 0.11010938882827759,
+      "normalized_mae": 0.3182354271411896,
+      "pearson": 0.9098241925239563,
+      "spearman": 0.9093243872251852
+    },
+    {
+      "score": "voiceclap_attribute:Monotone_vs._Expressive",
+      "n": 1742,
+      "raw_mae": 0.13827218115329742,
+      "normalized_mae": 0.23182007670402527,
+      "pearson": 0.9470492601394653,
+      "spearman": 0.9450292944655017
+    },
+    {
+      "score": "voiceclap_attribute:Pain",
+      "n": 1742,
+      "raw_mae": 0.06961818784475327,
+      "normalized_mae": 0.27847275137901306,
+      "pearson": 0.9070956707000732,
+      "spearman": 0.9082312687792244
+    },
+    {
+      "score": "voiceclap_attribute:Pleasure_Ecstasy",
+      "n": 1742,
+      "raw_mae": 0.09297717362642288,
+      "normalized_mae": 0.30868735909461975,
+      "pearson": 0.8994812965393066,
+      "spearman": 0.9052184947011301
+    },
+    {
+      "score": "voiceclap_attribute:Pride",
+      "n": 1742,
+      "raw_mae": 0.09586846828460693,
+      "normalized_mae": 0.2747032344341278,
+      "pearson": 0.9321469068527222,
+      "spearman": 0.9317746028177161
+    },
+    {
+      "score": "voiceclap_attribute:Recording_Quality",
+      "n": 1742,
+      "raw_mae": 0.07871998846530914,
+      "normalized_mae": 0.2399117648601532,
+      "pearson": 0.9532456398010254,
+      "spearman": 0.9531246051172696
+    },
+    {
+      "score": "voiceclap_attribute:Relief",
+      "n": 1742,
+      "raw_mae": 0.1319892406463623,
+      "normalized_mae": 0.31732073426246643,
+      "pearson": 0.9078335762023926,
+      "spearman": 0.9107534489677649
+    },
+    {
+      "score": "voiceclap_attribute:Sadness",
+      "n": 1742,
+      "raw_mae": 0.09915526211261749,
+      "normalized_mae": 0.316870778799057,
+      "pearson": 0.9078446626663208,
+      "spearman": 0.910986607947036
+    },
+    {
+      "score": "voiceclap_attribute:Serious_vs._Humorous",
+      "n": 1742,
+      "raw_mae": 0.1327086240053177,
+      "normalized_mae": 0.23263153433799744,
+      "pearson": 0.9447765350341797,
+      "spearman": 0.9403996417103235
+    },
+    {
+      "score": "voiceclap_attribute:Sexual_Lust",
+      "n": 1742,
+      "raw_mae": 0.1140112653374672,
+      "normalized_mae": 0.27285003662109375,
+      "pearson": 0.9311144948005676,
+      "spearman": 0.9348259159525761
+    },
+    {
+      "score": "voiceclap_attribute:Shame",
+      "n": 1742,
+      "raw_mae": 0.09883543848991394,
+      "normalized_mae": 0.350746750831604,
+      "pearson": 0.8782891631126404,
+      "spearman": 0.8826080938006814
+    },
+    {
+      "score": "voiceclap_attribute:Soft_vs._Harsh",
+      "n": 1742,
+      "raw_mae": 0.13331128656864166,
+      "normalized_mae": 0.37014394998550415,
+      "pearson": 0.8638095855712891,
+      "spearman": 0.8733720974726334
+    },
+    {
+      "score": "voiceclap_attribute:Sourness",
+      "n": 1742,
+      "raw_mae": 0.09228683263063431,
+      "normalized_mae": 0.31769639253616333,
+      "pearson": 0.9113357067108154,
+      "spearman": 0.9078875066664586
+    },
+    {
+      "score": "voiceclap_attribute:Submissive_vs._Dominant",
+      "n": 1742,
+      "raw_mae": 0.1274595707654953,
+      "normalized_mae": 0.35503679513931274,
+      "pearson": 0.8829995393753052,
+      "spearman": 0.8895430801421766
+    },
+    {
+      "score": "voiceclap_attribute:Teasing",
+      "n": 1742,
+      "raw_mae": 0.10982626676559448,
+      "normalized_mae": 0.28951379656791687,
+      "pearson": 0.9186223745346069,
+      "spearman": 0.9223451134127931
+    },
+    {
+      "score": "voiceclap_attribute:Thankfulness_Gratitude",
+      "n": 1742,
+      "raw_mae": 0.18362605571746826,
+      "normalized_mae": 0.3468877971172333,
+      "pearson": 0.8831659555435181,
+      "spearman": 0.8748271955250152
+    },
+    {
+      "score": "voiceclap_attribute:Triumph",
+      "n": 1742,
+      "raw_mae": 0.108494333922863,
+      "normalized_mae": 0.30240514874458313,
+      "pearson": 0.916771650314331,
+      "spearman": 0.9187988771172593
+    },
+    {
+      "score": "voiceclap_attribute:Valence",
+      "n": 1742,
+      "raw_mae": 0.24712814390659332,
+      "normalized_mae": 0.3897474408149719,
+      "pearson": 0.8321331739425659,
+      "spearman": 0.8237763471912629
+    },
+    {
+      "score": "voiceclap_attribute:Vulnerable_vs._Emotionally_Detached",
+      "n": 1742,
+      "raw_mae": 0.1671334058046341,
+      "normalized_mae": 0.3006627559661865,
+      "pearson": 0.9140366315841675,
+      "spearman": 0.9202617430446476
+    },
+    {
+      "score": "voiceclap_attribute:Warm_vs._Cold",
+      "n": 1742,
+      "raw_mae": 0.13754905760288239,
+      "normalized_mae": 0.34442320466041565,
+      "pearson": 0.8834383487701416,
+      "spearman": 0.8770633688478983
+    },
+    {
+      "score": "voiceclap_attribute:duration",
+      "n": 1742,
+      "raw_mae": 0.6205692291259766,
+      "normalized_mae": 0.09797968715429306,
+      "pearson": 0.9906408190727234,
+      "spearman": 0.9883933916461584
+    },
+    {
+      "score": "voiceclap_attribute:score_background_quality",
+      "n": 1742,
+      "raw_mae": 0.07298555225133896,
+      "normalized_mae": 0.14639505743980408,
+      "pearson": 0.9813811779022217,
+      "spearman": 0.9749908357109862
+    },
+    {
+      "score": "voiceclap_attribute:score_content_enjoyment",
+      "n": 1742,
+      "raw_mae": 0.035007134079933167,
+      "normalized_mae": 0.14002853631973267,
+      "pearson": 0.9499653577804565,
+      "spearman": 0.9310511631514924
+    },
+    {
+      "score": "voiceclap_attribute:score_overall_quality",
+      "n": 1742,
+      "raw_mae": 0.05923214554786682,
+      "normalized_mae": 0.14366185665130615,
+      "pearson": 0.981910228729248,
+      "spearman": 0.9797914961852117
+    },
+    {
+      "score": "voiceclap_attribute:score_speech_quality",
+      "n": 1742,
+      "raw_mae": 0.015438434667885303,
+      "normalized_mae": 0.061753738671541214,
+      "pearson": 0.9542417526245117,
+      "spearman": 0.9477855115811641
+    },
+    {
+      "score": "voiceclap_attribute:talking_speed",
+      "n": 1742,
+      "raw_mae": 1.0087860822677612,
+      "normalized_mae": 0.2688470482826233,
+      "pearson": 0.9371767044067383,
+      "spearman": 0.9276118520431389
+    }
+  ],
+  "speaker_cosine": {
+    "timbre": {
+      "n": 1422,
+      "mean": 0.9139180357336117
+    },
+    "identity": {
+      "n": 1422,
+      "mean": 0.88047563705892
+    }
+  },
+  "frame_f1": 0.969343042929096,
+  "frame_threshold": 0.5,
+  "cps_raw_mae": null,
+  "burst_class_oracle_span_accuracy": 0.5720268006700168,
+  "burst_class_events": 2388,
+  "burst_localization": {
+    "0.1": {
+      "precision": 0.6764621968616262,
+      "recall": 0.9928810720268006,
+      "f1": 0.8046835228236892,
+      "matched": 2371
+    },
+    "0.3": {
+      "precision": 0.675320970042796,
+      "recall": 0.9912060301507538,
+      "f1": 0.803325979976243,
+      "matched": 2367
+    },
+    "0.5": {
+      "precision": 0.6687589158345221,
+      "recall": 0.981574539363484,
+      "f1": 0.7955201086034278,
+      "matched": 2344
+    }
+  },
+  "burst_start_mae_s": 0.020531421341206245,
+  "burst_end_mae_s": 0.06070012652889077,
+  "burst_matched_event_class_accuracy": 0.5554618304512864,
+  "burst_matched_event_class_n": 2371,
+  "limitations": "Oracle-span and predicted-span classification reported separately. Boundaries use fixed 0.5 onset threshold and native-feature interpolation; IoU matching uses Hungarian assignment.",
+  "domain": "p3_test",
+  "phase": "legacy",
+  "split_scope": "Fixed identical held-out audio selection before and after fine-tuning"
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Humaneness Ears training and evaluation path</title>
+  <desc id="desc">Stage one follows S1 through S10 with ten percent synthetic vocal-burst snippets at every stage. Selected S4 Base and S3 Small checkpoints are adapted for two epochs on 58,380 Gemini-annotated training clips with cached specialist targets. Separate evaluations use held-out annotations, expert-rated benchmark labels, and a paired synthetic retention test.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102a40"/><stop offset="1" stop-color="#23445a"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#d3e6e9"/></marker>
+  </defs>
+  <rect width="1200" height="640" rx="30" fill="url(#bg)"/>
+  <text x="60" y="68" fill="#fff7ec" font-size="36" font-family="Arial,sans-serif" font-weight="700">From a large curriculum to a dense listener</text>
+  <text x="60" y="108" fill="#c8dfe5" font-size="21" font-family="Arial,sans-serif">Two training phases, then three different questions at evaluation time.</text>
+
+  <rect x="55" y="163" width="337" height="235" rx="23" fill="#e9f5f1"/>
+  <rect x="55" y="163" width="337" height="11" rx="5" fill="#54c7c8"/>
+  <text x="82" y="220" fill="#174b46" font-size="22" font-family="Arial,sans-serif" font-weight="700">1 · CURRICULUM</text>
+  <text x="82" y="269" fill="#17354a" font-size="28" font-family="Arial,sans-serif" font-weight="700">S1 → S10</text>
+  <text x="82" y="310" fill="#17354a" font-size="22" font-family="Arial,sans-serif">71.93M sample exposures</text>
+  <text x="82" y="350" fill="#17354a" font-size="22" font-family="Arial,sans-serif">10% P3 snippets per stage</text>
+  <path d="M399 280h35" stroke="#d3e6e9" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="448" y="163" width="312" height="235" rx="23" fill="#fff1e8"/>
+  <rect x="448" y="163" width="312" height="11" rx="5" fill="#eaa081"/>
+  <text x="475" y="220" fill="#8f4e3c" font-size="22" font-family="Arial,sans-serif" font-weight="700">2 · ADAPTATION</text>
+  <text x="475" y="267" fill="#17354a" font-size="25" font-family="Arial,sans-serif" font-weight="700">58,380 train clips</text>
+  <text x="475" y="307" fill="#17354a" font-size="22" font-family="Arial,sans-serif">Gemini + cached teachers</text>
+  <text x="475" y="348" fill="#17354a" font-size="22" font-family="Arial,sans-serif">two full-tuning epochs</text>
+  <path d="M767 280h35" stroke="#d3e6e9" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="816" y="163" width="329" height="235" rx="23" fill="#e9eaf7"/>
+  <rect x="816" y="163" width="329" height="11" rx="5" fill="#aaa8e8"/>
+  <text x="843" y="220" fill="#4d488c" font-size="22" font-family="Arial,sans-serif" font-weight="700">3 · RELEASED MODELS</text>
+  <text x="843" y="269" fill="#17354a" font-size="27" font-family="Arial,sans-serif" font-weight="700">Base + Medium</text>
+  <text x="843" y="310" fill="#17354a" font-size="22" font-family="Arial,sans-serif">26.44M / 97.10M params</text>
+  <text x="843" y="350" fill="#17354a" font-size="22" font-family="Arial,sans-serif">one-pass audio annotation</text>
+
+  <text x="58" y="455" fill="#ffe2c8" font-size="21" font-family="Arial,sans-serif" font-weight="700">EVALUATION ASKS THREE DIFFERENT QUESTIONS</text>
+  <rect x="55" y="478" width="337" height="101" rx="16" fill="#254b60" stroke="#6f9cac" stroke-width="2"/>
+  <text x="80" y="518" fill="#f6eee4" font-size="22" font-family="Arial,sans-serif" font-weight="700">3,544 held-out clips</text>
+  <text x="80" y="550" fill="#d6e6e9" font-size="20" font-family="Arial,sans-serif">Teacher agreement + burst labels</text>
+  <rect x="432" y="478" width="337" height="101" rx="16" fill="#254b60" stroke="#6f9cac" stroke-width="2"/>
+  <text x="457" y="518" fill="#f6eee4" font-size="22" font-family="Arial,sans-serif" font-weight="700">External benchmarks</text>
+  <text x="457" y="550" fill="#d6e6e9" font-size="20" font-family="Arial,sans-serif">Expert and actor labels</text>
+  <rect x="808" y="478" width="337" height="101" rx="16" fill="#254b60" stroke="#6f9cac" stroke-width="2"/>
+  <text x="833" y="518" fill="#f6eee4" font-size="22" font-family="Arial,sans-serif" font-weight="700">2,000 P3 clips</text>
+  <text x="833" y="550" fill="#d6e6e9" font-size="20" font-family="Arial,sans-serif">Before / after retention</text>
+</svg>

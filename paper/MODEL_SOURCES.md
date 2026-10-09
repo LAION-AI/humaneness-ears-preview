@@ -1,0 +1,18 @@
+# Model and annotation source inventory
+
+Checked 9 October 2026. Every model-card URL in this table returned HTTP 200. The table distinguishes the model used to **initialize** Humaneness Ears, annotation **teachers** used to make targets, and outputs the released student actually predicts. The student loads only its Whisper encoder and learned heads at inference.
+
+| Role | Model or code | Used for | Student output |
+|---|---|---|---|
+| Encoder initialization | [OpenAI Whisper Base](https://huggingface.co/openai/whisper-base), [Small](https://huggingface.co/openai/whisper-small) | Six-layer/512 and twelve-layer/768 audio encoders; full fine-tuning | Shared acoustic representation; no decoder or transcript generation |
+| Gemini adaptation annotator | Recorded identifier `gemini-3.8-flash`; exact schema and prompt in the annotation preparation lineage | Preferred valid labels for 40 emotions, 57 VoiceNet dimensions, genuineness, burst blend, count, CPS, start/end times and burst type; overlapping VoiceCLAP emotion slots also take Gemini value | Corresponding numeric and event heads |
+| Original emotion and extras | [Empathic Insight Voice Plus](https://huggingface.co/laion/Empathic-Insight-Voice-Plus), [BUD-E Whisper](https://huggingface.co/laion/BUD-E-Whisper) | Original emotion teacher, 19 extras including content enjoyment and background quality; 3,072D pooled intermediate feature cached in sidecar | 19 extra scalars; no 3,072D head |
+| Original 57 dimensions | [VoiceNet commercial dimension predictors](https://huggingface.co/laion/voicenet-dimension-predictors-commercial) | Original voice-style labels, superseded where valid Gemini values exist | 57 scalars |
+| Original genuineness/blend | [Genuineness](https://huggingface.co/laion/voiceclap-commercial-genuineness), [vocal-burst blend](https://huggingface.co/laion/voiceclap-commercial-vocalburst-blend) | Original score labels, superseded by valid Gemini labels on matching axes | Two scalar slots |
+| Additional VoiceCLAP properties | [Commercial VoiceCLAP](https://huggingface.co/laion/voiceclap-commercial), [attribute heads](https://huggingface.co/laion/voiceclap-commercial-attribute-heads) | 61 scalar attributes; 768D intermediate feature cached. Matching emotion slots use Gemini when valid | 61 scalar slots; no 768D head |
+| Audio aesthetics | [Meta AudioBox Aesthetics](https://huggingface.co/facebook/audiobox-aesthetics) | Content enjoyment (CE), content usefulness (CU), production complexity (PC), production quality (PQ) | Four scalar slots |
+| Speech quality | [Microsoft DNSMOS](https://github.com/microsoft/DNS-Challenge/tree/master/DNSMOS) | SIG/BAK/OVRL raw and calibrated values plus P808 MOS | Seven scalar slots |
+| Speaker characteristic teachers | [Orange Speaker-wavLM-tbr](https://huggingface.co/Orange/Speaker-wavLM-tbr) at `b8d2608d56f18e2b6e27ba566cf69132e2c2ad6c`; [Speaker-wavLM-id](https://huggingface.co/Orange/Speaker-wavLM-id) at `abbb3c7b8d220ceebc33d9bd3bb5aedb580342c7` | Timbre and speaker-identity vectors on valid single-speaker clips | Distinct 128D and 250D unit vectors |
+| Event taxonomy and reference detector | [LAION voice taxonomies](https://github.com/LAION-AI/voice-taxonomies), [vocalburst locator](https://huggingface.co/laion/vocalburst-locator) | Original event class vocabulary and locator stress-test context | 53 event classes, 20-ms occupancy, event proposals |
+
+Exact ordered scalar names and both normalization systems are in [`target_schema.csv`](target_schema.csv). The 78-to-53 Gemini event map is in `evidence/snapshots/gemini_burst_mapping.json`. These repositories have their own licenses and usage terms; no third-party weights are copied into this paper project.

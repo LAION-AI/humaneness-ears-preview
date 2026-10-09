@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 570" role="img" aria-labelledby="title desc">
+<title id="title">Vocal burst localization before and after Gemini adaptation</title>
+<desc id="desc">Event F1 at intersection over union 0.5 on the same 2,000 synthetic P3 test clips. Base falls from 0.750 to 0.386; Medium falls from 0.796 to 0.435.</desc>
+<rect width="1200" height="570" rx="24" fill="#142d43"/>
+<text x="64" y="72" fill="#f5f7fa" font-family="Arial,sans-serif" font-size="31" font-weight="700">An honest stress test: retaining burst boundaries</text>
+<text x="64" y="108" fill="#aac1d3" font-family="Arial,sans-serif" font-size="18">Same 2,000 held-out P3 mixtures · event F1 at IoU ≥ 0.5 · higher is better</text>
+<g font-family="Arial,sans-serif" font-size="20" fill="#f5f7fa">
+<text x="64" y="208">Base</text><text x="64" y="380">Medium</text>
+</g>
+<g fill="#33536a"><rect x="210" y="170" width="870" height="39" rx="8"/><rect x="210" y="224" width="870" height="39" rx="8"/><rect x="210" y="342" width="870" height="39" rx="8"/><rect x="210" y="396" width="870" height="39" rx="8"/></g>
+<g fill="#5bdbce"><rect x="210" y="170" width="652" height="39" rx="8"/><rect x="210" y="342" width="692" height="39" rx="8"/></g>
+<g fill="#ffae85"><rect x="210" y="224" width="336" height="39" rx="8"/><rect x="210" y="396" width="378" height="39" rx="8"/></g>
+<g font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#fff"><text x="875" y="197">0.750</text><text x="558" y="251">0.386</text><text x="915" y="369">0.796</text><text x="600" y="423">0.435</text></g>
+<g font-family="Arial,sans-serif" font-size="16" fill="#c6d5df"><text x="210" y="157">Before Gemini tuning</text><text x="210" y="281">After Gemini tuning</text><text x="210" y="329">Before Gemini tuning</text><text x="210" y="453">After Gemini tuning</text></g>
+<text x="64" y="520" fill="#f5f7fa" font-family="Arial,sans-serif" font-size="18">The broad adaptation improves several voice scores, but weakens synthetic event localization.</text>
+</svg>

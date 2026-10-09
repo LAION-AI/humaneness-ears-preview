@@ -1,0 +1,178 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Humaneness Ears — LAION research preview</title><meta name="description" content="An open, compact audio model that listens beyond the transcript. Read the LAION Humaneness Ears research preview and paper draft."><meta property="og:title" content="Humaneness Ears: Listening Beyond the Transcript"><meta property="og:description" content="Open voice understanding for expression, speaker traits, quality and vocal events."><meta property="og:image" content="https://laion-ai.github.io/humaneness-ears-preview/assets/hero.jpg"><link rel="icon" href="assets/architecture.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><header><div class="bar"><a class="brand" href="https://laion.ai">LAION<span>.</span></a><nav><a href="#article">Story</a><a href="#one-recording-many-useful-questions">Model</a><a href="#how-we-taught-the-models-to-listen">Training</a><a href="#what-the-evaluations-say">Results</a><a href="paper/">Paper &amp; code</a><a href="https://huggingface.co/laion/humaneness-ears-base-medium">Models ↗</a></nav></div></header><main class="shell"><div class="eyebrow">LAION · Research preview · 9 October 2026</div><h1 class="hero-title">Humaneness Ears:<br>Listening Beyond the Transcript</h1><p class="dek">A compact, open way to study emotion, vocal style, speaker traits, recording quality and the little events hidden between words.</p><div class="links"><a href="#article">Read the story ↓</a><a href="paper/">Read the paper</a><a href="https://laion-humaneness-ears-atlas.static.hf.space/">Explore audio examples</a></div><div class="note">This is a public test preview for feedback. The LAION main blog has not been updated.</div><article class="article" id="article"><p><img src="assets/hero.jpg" alt="Abstract sound waves branching into many colored acoustic cues" /></p>
+<p><em>An open, compact audio model that listens for the many things words alone leave out.</em></p>
+<blockquote>
+<p>“I'm fine.” The words are simple. The voice might be relieved, exhausted, amused, breathless, or holding back tears. A transcript records the sentence; it rarely records the moment.</p>
+</blockquote>
+<p>In <a href="https://laion.ai/blog/do-they-see-what-we-see/">“Do They See What We See?”</a>, we asked how machines might learn richer, more transparent ways to understand human expression. <strong>Humaneness Ears</strong> carries that question into audio. We want an open tool that can describe <em>how</em> somebody sounds, where a laugh or sob begins and ends, what the recording quality is like, and which properties of the speaker's voice remain stable across a changing performance.</p>
+<p>The result is a pair of encoder-only models, <strong>Base</strong> and <strong>Medium</strong>, released with <a href="https://huggingface.co/laion/humaneness-ears-base-medium">weights and inference code</a>, an <a href="https://laion-humaneness-ears-atlas.static.hf.space/">interactive listening atlas</a>, and this <a href="paper/">paper draft and evidence bundle</a>. These are research tools, not arbiters of somebody's inner state. Their scores are estimates of audible cues, and many training labels come from other models rather than people.</p>
+<h2 id="one-recording-many-useful-questions">One recording, many useful questions</h2>
+<p>Most audio pipelines answer one question at a time. Speech recognition recovers words. An emotion model predicts a small set of feelings. A quality model estimates how clean the recording sounds. A burst detector marks laughter, crying, gasps and other non-lexical events. Large collections often need all of these views, consistently and at scale.</p>
+<p>Humaneness Ears combines them in a shared acoustic encoder and separate task heads:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>What it can help describe</th>
+<th>Read the number as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40 EmoNet-style scores</td>
+<td>Fine-grained vocal emotion and expression</td>
+<td>A predicted <em>audible</em> cue, not a diagnosis</td>
+</tr>
+<tr>
+<td>57 VoiceNet-style dimensions</td>
+<td>Vocal style, delivery, prosody and timbre</td>
+<td>A model-estimated attribute on its own scale</td>
+</tr>
+<tr>
+<td>Genuineness, vocal-burst blend and quality families</td>
+<td>Aspects of performance, content enjoyment and recording quality, including AudioBox and DNSMOS targets</td>
+<td>Agreement with annotation models, unless independently tested against people</td>
+</tr>
+<tr>
+<td>Characters per second and burst count</td>
+<td>Speech rate and amount of non-speech vocal activity</td>
+<td>Clip-level estimates</td>
+</tr>
+<tr>
+<td>Orange timbre and identity vectors</td>
+<td>128-dimensional timbre and 250-dimensional speaker representation</td>
+<td>Embedding predictions for similarity search</td>
+</tr>
+<tr>
+<td>20 ms burst timeline and 53 event classes</td>
+<td>Where a vocal event happens and what type it might be</td>
+<td>Candidate intervals and class probabilities</td>
+</tr>
+</tbody>
+</table>
+<p>The 192 scalar slots include the burst count; characters per second is an additional head. Labels are incomplete across sources, so each loss applies only where its target is available. <a href="https://arxiv.org/abs/2506.09827">EmoNet</a>, <a href="https://arxiv.org/abs/2609.32016">VoiceNet</a>, <a href="https://arxiv.org/abs/2502.05139">AudioBox Aesthetics</a>, <a href="https://arxiv.org/abs/2110.01763">DNSMOS</a>, and the <a href="https://huggingface.co/Orange">Orange speaker models</a> provide much of the vocabulary and supervision behind these outputs. Their published taxonomies and methods remain the source of truth for interpreting individual dimensions.</p>
+<img src="assets/architecture.svg" alt="Whisper encoder feeding clip-level scalar, speaker-vector, and time-resolved event heads" style="width:100%;max-width:1000px" />
+<p><em>The architecture, simplified. A shared Whisper audio encoder feeds clip-level predictions and a separate time-resolved vocal-event branch. There is no Whisper decoder or speech-transcription head in the released models.</em></p>
+<p><strong>Base</strong> begins with the Whisper Base audio encoder; <strong>Medium</strong> begins with the Whisper Small audio encoder. The release names describe the size of our students: Medium is <strong>not</strong> OpenAI's Whisper Medium. The complete trainable models contain about <strong>26.4 million</strong> and <strong>97.1 million</strong> parameters, respectively. Their heads combine information pooled from multiple encoder layers with the final time sequence, so a task can draw on both broad acoustic context and local evidence.</p>
+<h2 id="how-we-taught-the-models-to-listen">How we taught the models to listen</h2>
+<p>The first phase was a large continuous curriculum through ten stages of the <a href="https://huggingface.co/datasets/laion/tts-scaling-ladder-de-en">LAION speech scaling ladder</a>. Each stage was traversed once under a single cosine learning-rate schedule. Ten percent of each stage's exposures were drawn from a frozen pool of synthetic mixtures designed to teach vocal-burst boundaries. Across stages there were <strong>71.93 million training exposures</strong>. Because the ladder stages overlap and synthetic clips recur, this is emphatically <strong>not</strong> a count of unique recordings.</p>
+<p>The next phase adapted selected intermediate checkpoints—Base from S4 and the Whisper Small-backed model from S3—for two epochs on <strong>58,380 training clips</strong> from a 65,163-clip, 194-hour valid annotation pool. These clips combine Gemini-produced descriptions, scores and event times with cached specialist-model targets in audio-linked sidecars. The held-out split has <strong>3,544 clips</strong>. This is <em>model distillation and synthetic supervision</em>, not 65,163 independent human judgments.</p>
+<img src="assets/training.svg" alt="Ten-stage speech and synthetic burst curriculum followed by Gemini and specialist-teacher adaptation and separate evaluations" style="width:100%;max-width:1000px" />
+<p><em>Two training phases, followed by several different tests. We keep human-label benchmarks separate from comparisons to the teachers that created many of the targets.</em></p>
+<p>The full training used 16 GH200 GPUs across four nodes for the curriculum; the later adaptation used four GH200 GPUs. Encoder learning rates were lower than task-head rates, and all encoder layers were updated. The <a href="paper/">technical manuscript</a> records optimizer settings, split rules, target transforms and model sources.</p>
+<h2 id="what-the-evaluations-say">What the evaluations say</h2>
+<p>The strongest evidence for a voice understanding model comes from <strong>held-out human labels</strong>. These benchmarks ask different questions and must keep their original protocols visible.</p>
+<table>
+<thead>
+<tr>
+<th>Human-label evaluation</th>
+<th style="text-align:right">Base</th>
+<th style="text-align:right">Medium</th>
+<th>How to interpret it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EmoNet-Voice, mapped intensity pairs · Pearson <em>r</em></td>
+<td style="text-align:right"><strong>0.434</strong></td>
+<td style="text-align:right"><strong>0.451</strong></td>
+<td>12,000 mapped pairs; two queried labels were unavailable and some audio exceeds our 30 s input window</td>
+</tr>
+<tr>
+<td>VoiceNet-Emo · mean per-prompt Spearman ρ</td>
+<td style="text-align:right"><strong>0.429</strong></td>
+<td style="text-align:right"><strong>0.428</strong></td>
+<td>7,986 pairs in our local ≥2-rater snapshot</td>
+</tr>
+<tr>
+<td>VoiceNet-Ext · mean per-prompt Spearman ρ</td>
+<td style="text-align:right"><strong>0.157</strong></td>
+<td style="text-align:right"><strong>0.150</strong></td>
+<td>13,917 pairs in our local snapshot; expert agreement is difficult on these fine-grained dimensions</td>
+</tr>
+<tr>
+<td>CREMA-D · actor-disjoint accuracy</td>
+<td style="text-align:right"><strong>63.10%</strong></td>
+<td style="text-align:right"><strong>64.23%</strong></td>
+<td>Five-fold speaker-disjoint transfer with a <em>trained</em> small classifier on the 192 predicted scores</td>
+</tr>
+<tr>
+<td>RAVDESS · actor-disjoint accuracy</td>
+<td style="text-align:right"><strong>65.97%</strong></td>
+<td style="text-align:right"><strong>66.39%</strong></td>
+<td>The same supervised transfer protocol</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://arxiv.org/abs/2609.32016">VoiceNet paper</a> reports mean per-prompt ρ <strong>0.372</strong> for VoiceCLAP-Large on Emo and <strong>0.148</strong> on Ext. Those numbers offer context, <strong>not a head-to-head win</strong>: the VoiceNet model uses voice–text cosine scores and its Ext sample count differs from ours. The <a href="https://arxiv.org/abs/2506.09827">EmoNet-Voice paper</a> likewise evaluates different model interfaces and subsets. On CREMA-D and RAVDESS, our table includes benchmark-label training of an adapter; a fixed zero-shot crosswalk scores far lower (<strong>18.9–19.7%</strong> and <strong>24.7–24.8%</strong>). The adapter is part of the protocol, not a hidden property of the raw student output.</p>
+<p>A separate test compares the students with the models that supplied training targets. It measures <strong>distillation agreement</strong>, not independent human validity:</p>
+<table>
+<thead>
+<tr>
+<th>Held-out Gemini test · 3,544 clips</th>
+<th style="text-align:right">Base</th>
+<th style="text-align:right">Medium</th>
+<th>Better direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EmoNet-family normalized MAE</td>
+<td style="text-align:right">0.587</td>
+<td style="text-align:right"><strong>0.561</strong></td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>VoiceNet-family normalized MAE</td>
+<td style="text-align:right">0.497</td>
+<td style="text-align:right"><strong>0.481</strong></td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>AudioBox-family normalized MAE</td>
+<td style="text-align:right">0.188</td>
+<td style="text-align:right"><strong>0.174</strong></td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>DNSMOS-family normalized MAE</td>
+<td style="text-align:right">0.205</td>
+<td style="text-align:right"><strong>0.198</strong></td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Orange timbre cosine similarity</td>
+<td style="text-align:right">0.904</td>
+<td style="text-align:right"><strong>0.922</strong></td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>Orange identity cosine similarity</td>
+<td style="text-align:right">0.854</td>
+<td style="text-align:right"><strong>0.874</strong></td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>Vocal-event frame F1</td>
+<td style="text-align:right"><strong>0.693</strong></td>
+<td style="text-align:right">0.689</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>Vocal-event F1 · interval IoU ≥ 0.5</td>
+<td style="text-align:right">0.194</td>
+<td style="text-align:right"><strong>0.195</strong></td>
+<td>Higher</td>
+</tr>
+</tbody>
+</table>
+<p>The embedding cosine figures are based on 1,718 valid single-speaker clips. The interval F1 is modest: the event head has high recall but low precision. A nice-looking timeline should therefore be treated as a <strong>proposal for review</strong>, especially when precise boundaries matter.</p>
+<p>We also checked whether the Gemini phase preserved a skill the earlier curriculum had taught. On the <strong>same 2,000 held-out synthetic P3 mixtures</strong>, Base event F1 dropped from <strong>0.750 to 0.386</strong>; Medium dropped from <strong>0.796 to 0.435</strong>. This is a genuine trade-off, not a result to tuck away. Future runs should replay boundary-rich mixtures during adaptation and verify them on manually marked real events.</p>
+<img src="assets/results.svg" alt="Base event F1 falls from 0.750 to 0.386 and Medium from 0.796 to 0.435 after Gemini adaptation on the same 2,000 P3 clips" style="width:100%;max-width:1000px" />
+<h2>Listen, inspect, improve</h2>
+<p>A correlation coefficient is useful; listening to the clips behind it is indispensable. The <a href="https://laion-humaneness-ears-atlas.static.hf.space/">Humaneness Ears listening atlas</a> lets readers hear examples, inspect score rankings, compare timbre and identity neighbors, and examine proposed vocal-burst intervals. The <a href="https://laion-whisper-base-small-emotion-voice-burst.static.hf.space/benchmark.html">independent benchmark report</a> and <a href="https://huggingface.co/laion/humaneness-ears-base-medium">model repository</a> expose more of the evaluation and implementation. The <a href="https://huggingface.co/datasets/laion/whisper-gemini-voice-annotations">Gemini annotation dataset</a> explains its own source and annotation process.</p>
+<p>We are sharing a <a href="paper/">short, Overleaf-ready paper draft</a> with the figures, BibTeX, code pointers, target schema and an evidence ledger. It identifies open questions: we still need controlled single-task ablations, stronger leakage checks, uncertainty intervals, and a manually checked real-world vocal-event benchmark. A joint model is practical; this study does not yet prove that joint training alone caused every gain.</p>
+<p>Our broader <a href="https://github.com/LAION-AI/BUD-E">BUD-E</a> ambition is open, reproducible voice technology that can perceive and eventually produce communication with more nuance. Richer annotations could help researchers find diverse voice-acting examples, audit generative systems, and train open speech models with less reliance on opaque pipelines. We are also working toward better voice generation and, eventually, responsive real-time interaction. That future needs transparent datasets, careful evaluation and room for people to disagree about what a voice conveys.</p>
+<p>A voice is never just the words. Our aim is to make the rest of the signal easier to study—openly, reproducibly, and with the humility it deserves.</p>
+<hr />
+<p><strong>Further reading:</strong> <a href="https://arxiv.org/abs/2506.09827">EmoNet-Voice</a> · <a href="https://arxiv.org/abs/2609.32016">VoiceNet and Emolia benchmarks</a> · <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/8b2dd02001e72f65091115fb7f39d8c7-Abstract-Datasets_and_Benchmarks_Track.html">EmoNet-Face</a> · <a href="https://proceedings.mlr.press/v202/radford23a.html">Whisper</a> · <a href="https://huggingface.co/laion/humaneness-ears-base-medium">model release</a> · <a href="paper/">paper draft</a>.</p>
+</article></main><footer>LAION · Humaneness Ears research preview · <a href="https://github.com/LAION-AI/humaneness-ears-preview">GitHub sources</a></footer></body></html>

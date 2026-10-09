@@ -1,0 +1,468 @@
+{
+  "dataset": "ravdess",
+  "parameters": 12872,
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "seed": 20261006,
+  "protocol": "192 raw predictions -> training-fold StandardScaler -> 64 GELU -> class logits; five actor-disjoint outer folds; three inner folds select LR/epochs; full-batch AdamW",
+  "comparison": "Supervised benchmark adaptation; distinct from paper zero-shot",
+  "metrics": {
+    "n": 1440,
+    "actors": 24,
+    "accuracy": 0.6597222222222222,
+    "balanced_accuracy": 0.65625,
+    "macro_f1": 0.6563266019390828,
+    "accuracy_actor_bootstrap_95ci": [
+      0.6222222222222222,
+      0.6951388888888889
+    ],
+    "predicted_neutral_share": 0.07291666666666667,
+    "per_class": [
+      {
+        "class": "angry",
+        "support": 192,
+        "recall": 0.8177083333333334,
+        "precision": 0.7772277227722773
+      },
+      {
+        "class": "calm",
+        "support": 192,
+        "recall": 0.671875,
+        "precision": 0.7166666666666667
+      },
+      {
+        "class": "disgust",
+        "support": 192,
+        "recall": 0.6666666666666666,
+        "precision": 0.7664670658682635
+      },
+      {
+        "class": "fearful",
+        "support": 192,
+        "recall": 0.6458333333333334,
+        "precision": 0.6595744680851063
+      },
+      {
+        "class": "happy",
+        "support": 192,
+        "recall": 0.5625,
+        "precision": 0.5482233502538071
+      },
+      {
+        "class": "neutral",
+        "support": 96,
+        "recall": 0.6041666666666666,
+        "precision": 0.5523809523809524
+      },
+      {
+        "class": "sad",
+        "support": 192,
+        "recall": 0.546875,
+        "precision": 0.4883720930232558
+      },
+      {
+        "class": "surprised",
+        "support": 192,
+        "recall": 0.734375,
+        "precision": 0.7580645161290323
+      }
+    ],
+    "confusion": {
+      "angry": {
+        "angry": 157,
+        "calm": 1,
+        "disgust": 10,
+        "fearful": 2,
+        "happy": 8,
+        "neutral": 4,
+        "sad": 0,
+        "surprised": 10
+      },
+      "calm": {
+        "angry": 0,
+        "calm": 129,
+        "disgust": 7,
+        "fearful": 4,
+        "happy": 5,
+        "neutral": 16,
+        "sad": 30,
+        "surprised": 1
+      },
+      "disgust": {
+        "angry": 19,
+        "calm": 3,
+        "disgust": 128,
+        "fearful": 11,
+        "happy": 3,
+        "neutral": 5,
+        "sad": 17,
+        "surprised": 6
+      },
+      "fearful": {
+        "angry": 7,
+        "calm": 3,
+        "disgust": 1,
+        "fearful": 124,
+        "happy": 23,
+        "neutral": 1,
+        "sad": 27,
+        "surprised": 6
+      },
+      "happy": {
+        "angry": 13,
+        "calm": 2,
+        "disgust": 4,
+        "fearful": 18,
+        "happy": 108,
+        "neutral": 11,
+        "sad": 14,
+        "surprised": 22
+      },
+      "neutral": {
+        "angry": 2,
+        "calm": 10,
+        "disgust": 1,
+        "fearful": 1,
+        "happy": 6,
+        "neutral": 58,
+        "sad": 18,
+        "surprised": 0
+      },
+      "sad": {
+        "angry": 2,
+        "calm": 30,
+        "disgust": 7,
+        "fearful": 18,
+        "happy": 20,
+        "neutral": 10,
+        "sad": 105,
+        "surprised": 0
+      },
+      "surprised": {
+        "angry": 2,
+        "calm": 2,
+        "disgust": 9,
+        "fearful": 10,
+        "happy": 24,
+        "neutral": 0,
+        "sad": 4,
+        "surprised": 141
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_clips": 1140,
+      "held_clips": 300,
+      "train_actors": [
+        "01",
+        "04",
+        "05",
+        "06",
+        "08",
+        "09",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "held_actors": [
+        "02",
+        "03",
+        "07",
+        "12",
+        "16"
+      ],
+      "trials": [
+        {
+          "lr": 0.001,
+          "epochs": 20,
+          "inner_accuracy": 0.4780701754385965
+        },
+        {
+          "lr": 0.001,
+          "epochs": 50,
+          "inner_accuracy": 0.5736842105263158
+        },
+        {
+          "lr": 0.003,
+          "epochs": 20,
+          "inner_accuracy": 0.5754385964912281
+        },
+        {
+          "lr": 0.003,
+          "epochs": 50,
+          "inner_accuracy": 0.6026315789473684
+        }
+      ],
+      "selected": {
+        "lr": 0.003,
+        "epochs": 50,
+        "inner_accuracy": 0.6026315789473684
+      },
+      "outer_accuracy": 0.6966666666666667
+    },
+    {
+      "fold": 1,
+      "train_clips": 1140,
+      "held_clips": 300,
+      "train_actors": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "07",
+        "08",
+        "09",
+        "10",
+        "12",
+        "13",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "24"
+      ],
+      "held_actors": [
+        "06",
+        "11",
+        "14",
+        "22",
+        "23"
+      ],
+      "trials": [
+        {
+          "lr": 0.001,
+          "epochs": 20,
+          "inner_accuracy": 0.48333333333333334
+        },
+        {
+          "lr": 0.001,
+          "epochs": 50,
+          "inner_accuracy": 0.5710526315789474
+        },
+        {
+          "lr": 0.003,
+          "epochs": 20,
+          "inner_accuracy": 0.5666666666666667
+        },
+        {
+          "lr": 0.003,
+          "epochs": 50,
+          "inner_accuracy": 0.6052631578947368
+        }
+      ],
+      "selected": {
+        "lr": 0.003,
+        "epochs": 50,
+        "inner_accuracy": 0.6052631578947368
+      },
+      "outer_accuracy": 0.7133333333333334
+    },
+    {
+      "fold": 2,
+      "train_clips": 1140,
+      "held_clips": 300,
+      "train_actors": [
+        "01",
+        "02",
+        "03",
+        "05",
+        "06",
+        "07",
+        "08",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "held_actors": [
+        "04",
+        "09",
+        "15",
+        "17",
+        "24"
+      ],
+      "trials": [
+        {
+          "lr": 0.001,
+          "epochs": 20,
+          "inner_accuracy": 0.512280701754386
+        },
+        {
+          "lr": 0.001,
+          "epochs": 50,
+          "inner_accuracy": 0.6236842105263158
+        },
+        {
+          "lr": 0.003,
+          "epochs": 20,
+          "inner_accuracy": 0.6175438596491228
+        },
+        {
+          "lr": 0.003,
+          "epochs": 50,
+          "inner_accuracy": 0.6631578947368421
+        }
+      ],
+      "selected": {
+        "lr": 0.003,
+        "epochs": 50,
+        "inner_accuracy": 0.6631578947368421
+      },
+      "outer_accuracy": 0.57
+    },
+    {
+      "fold": 3,
+      "train_clips": 1140,
+      "held_clips": 300,
+      "train_actors": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "06",
+        "07",
+        "08",
+        "09",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "19",
+        "22",
+        "23",
+        "24"
+      ],
+      "held_actors": [
+        "05",
+        "10",
+        "18",
+        "20",
+        "21"
+      ],
+      "trials": [
+        {
+          "lr": 0.001,
+          "epochs": 20,
+          "inner_accuracy": 0.49298245614035086
+        },
+        {
+          "lr": 0.001,
+          "epochs": 50,
+          "inner_accuracy": 0.5719298245614035
+        },
+        {
+          "lr": 0.003,
+          "epochs": 20,
+          "inner_accuracy": 0.5710526315789474
+        },
+        {
+          "lr": 0.003,
+          "epochs": 50,
+          "inner_accuracy": 0.5894736842105263
+        }
+      ],
+      "selected": {
+        "lr": 0.003,
+        "epochs": 50,
+        "inner_accuracy": 0.5894736842105263
+      },
+      "outer_accuracy": 0.69
+    },
+    {
+      "fold": 4,
+      "train_clips": 1200,
+      "held_clips": 240,
+      "train_actors": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "09",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "held_actors": [
+        "01",
+        "08",
+        "13",
+        "19"
+      ],
+      "trials": [
+        {
+          "lr": 0.001,
+          "epochs": 20,
+          "inner_accuracy": 0.4841666666666667
+        },
+        {
+          "lr": 0.001,
+          "epochs": 50,
+          "inner_accuracy": 0.6133333333333333
+        },
+        {
+          "lr": 0.003,
+          "epochs": 20,
+          "inner_accuracy": 0.6066666666666667
+        },
+        {
+          "lr": 0.003,
+          "epochs": 50,
+          "inner_accuracy": 0.6566666666666666
+        }
+      ],
+      "selected": {
+        "lr": 0.003,
+        "epochs": 50,
+        "inner_accuracy": 0.6566666666666666
+      },
+      "outer_accuracy": 0.6208333333333333
+    }
+  ]
+}

@@ -1,0 +1,1759 @@
+{
+  "schema": "whisper-display-median-sd-v1",
+  "created_utc": "2026-10-03T10:34:10.124607+00:00",
+  "formula": "display_z = (raw_prediction - training_median) / training_standard_deviation",
+  "not_training_normalization": true,
+  "core_reference": {
+    "source": "laion/tts-scaling-ladder-de-en S9 t0+t1 metadata",
+    "n": 100858,
+    "train_only": true
+  },
+  "extra_reference": {
+    "source": "frozen P3 train split score sidecars",
+    "sampling": "numpy default_rng choice without replacement",
+    "seed": 640913,
+    "n": 100000,
+    "train_only": true
+  },
+  "p3_test_unavailable_slot": "R_quality",
+  "auxiliary_statistics": {
+    "characters_per_second_teacher": {
+      "n": 86334,
+      "median": 9.027975082397461,
+      "mean": 9.491173106342295,
+      "std": 3.7555096719457906,
+      "reference": "P3 train-only seeded random subset",
+      "note": "metadata-derived teacher estimate; not a direct output head"
+    }
+  },
+  "targets": [
+    {
+      "n": 100858,
+      "median": 0.00730133056640625,
+      "mean": 0.2897826591586936,
+      "std": 0.5696596093333121,
+      "index": 0,
+      "name": "emo_Affection",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.0005998611450195312,
+      "mean": 0.49101077925809283,
+      "std": 0.8848335145121259,
+      "index": 1,
+      "name": "emo_Amusement",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.004100799560546875,
+      "mean": 0.37773081788276064,
+      "std": 0.612635658870748,
+      "index": 2,
+      "name": "emo_Anger",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.005401611328125,
+      "mean": 0.28753860983749,
+      "std": 0.571654014360698,
+      "index": 3,
+      "name": "emo_Astonishment_Surprise",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0,
+      "mean": 0.12398992142552683,
+      "std": 0.4274812617870931,
+      "index": 4,
+      "name": "emo_Awe",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.01309967041015625,
+      "mean": 0.2277757287995834,
+      "std": 0.4154804979803125,
+      "index": 5,
+      "name": "emo_Bitterness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.63427734375,
+      "mean": 0.7013364187332528,
+      "std": 0.7414091517554422,
+      "index": 6,
+      "name": "emo_Concentration",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0010995864868164062,
+      "mean": 0.323125297903634,
+      "std": 0.5396948879404518,
+      "index": 7,
+      "name": "emo_Confusion",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.08245849609375,
+      "mean": 0.5256515038051517,
+      "std": 0.5978136444856601,
+      "index": 8,
+      "name": "emo_Contemplation",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.0004000663757324219,
+      "mean": 0.22090858030523455,
+      "std": 0.4638636176538301,
+      "index": 9,
+      "name": "emo_Contempt",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.00010001659393310547,
+      "mean": 0.36635008809676606,
+      "std": 0.5139128829427941,
+      "index": 10,
+      "name": "emo_Contentment",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0,
+      "mean": 0.49184577228643384,
+      "std": 0.6998412637613933,
+      "index": 11,
+      "name": "emo_Disappointment",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.00730133056640625,
+      "mean": 0.2258817927052414,
+      "std": 0.48920736284077704,
+      "index": 12,
+      "name": "emo_Disgust",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0,
+      "mean": 0.46006274220018173,
+      "std": 0.8214937383530316,
+      "index": 13,
+      "name": "emo_Distress",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.005901336669921875,
+      "mean": 0.31112316492983,
+      "std": 0.4656223447188386,
+      "index": 14,
+      "name": "emo_Doubt",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.01239776611328125,
+      "mean": 0.46170690814739923,
+      "std": 0.7275048523933489,
+      "index": 15,
+      "name": "emo_Elation",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.04290771484375,
+      "mean": 0.2539824392716656,
+      "std": 0.42962349885167034,
+      "index": 16,
+      "name": "emo_Embarrassment",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.004299163818359375,
+      "mean": 0.4326176612723573,
+      "std": 0.9166686151416064,
+      "index": 17,
+      "name": "emo_Emotional_Numbness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0283050537109375,
+      "mean": 0.2749904506642038,
+      "std": 0.53853623135499,
+      "index": 18,
+      "name": "emo_Fatigue_Exhaustion",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.01450347900390625,
+      "mean": 0.3203094251566605,
+      "std": 0.6096619688911245,
+      "index": 19,
+      "name": "emo_Fear",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.0037994384765625,
+      "mean": 0.4190572702242165,
+      "std": 0.6959187194034556,
+      "index": 20,
+      "name": "emo_Helplessness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.11724853515625,
+      "mean": 0.5810149940421725,
+      "std": 0.7602987000112217,
+      "index": 21,
+      "name": "emo_Hope_Enthusiasm_Optimism",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.149169921875,
+      "mean": 0.5230955432714629,
+      "std": 0.7049876333116478,
+      "index": 22,
+      "name": "emo_Impatience_and_Irritability",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.01470184326171875,
+      "mean": 0.19431301130897483,
+      "std": 0.532811676445926,
+      "index": 23,
+      "name": "emo_Infatuation",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.5888671875,
+      "mean": 1.481661343565541,
+      "std": 0.9070887410333477,
+      "index": 24,
+      "name": "emo_Interest",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.0251007080078125,
+      "mean": 0.17486853340251765,
+      "std": 0.5589861619075311,
+      "index": 25,
+      "name": "emo_Intoxication_Altered_States_of_Consciousness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0592041015625,
+      "mean": 0.21883598726044287,
+      "std": 0.442485786580317,
+      "index": 26,
+      "name": "emo_Jealousy_and_Envy",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.086669921875,
+      "mean": 0.4369666194496888,
+      "std": 0.6317893455078495,
+      "index": 27,
+      "name": "emo_Longing",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.055206298828125,
+      "mean": 0.2914964853978535,
+      "std": 0.5339246991985596,
+      "index": 28,
+      "name": "emo_Malevolence_Malice",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.0020008087158203125,
+      "mean": 0.25451412437838145,
+      "std": 0.5794549797186209,
+      "index": 29,
+      "name": "emo_Pain",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.016998291015625,
+      "mean": 0.40911873890398637,
+      "std": 0.6141651011991717,
+      "index": 30,
+      "name": "emo_Pleasure_Ecstasy",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0017004013061523438,
+      "mean": 0.2247931250437727,
+      "std": 0.5086404269476832,
+      "index": 31,
+      "name": "emo_Pride",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.032806396484375,
+      "mean": 0.3680700139563108,
+      "std": 0.6813418401597394,
+      "index": 32,
+      "name": "emo_Relief",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0,
+      "mean": 0.4844024238690627,
+      "std": 0.758629012002944,
+      "index": 33,
+      "name": "emo_Sadness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.02954864501953125,
+      "mean": 0.25457117611966334,
+      "std": 0.4938875273870716,
+      "index": 34,
+      "name": "emo_Sexual_Lust",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.01290130615234375,
+      "mean": 0.20686053316678601,
+      "std": 0.5102457533996335,
+      "index": 35,
+      "name": "emo_Shame",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.005401611328125,
+      "mean": 0.22639207071378056,
+      "std": 0.4392887025077591,
+      "index": 36,
+      "name": "emo_Sourness",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0,
+      "mean": 0.3536360859539964,
+      "std": 0.5450188290861497,
+      "index": 37,
+      "name": "emo_Teasing",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.04119873046875,
+      "mean": 0.3249925283194368,
+      "std": 0.6966390535994226,
+      "index": 38,
+      "name": "emo_Thankfulness_Gratitude",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": -0.007099151611328125,
+      "mean": 0.1963810149946867,
+      "std": 0.5212295779390895,
+      "index": 39,
+      "name": "emo_Triumph",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.984375,
+      "mean": 2.718919517896818,
+      "std": 1.2381640592050533,
+      "index": 40,
+      "name": "vn_AGEV_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.359375,
+      "mean": 2.4767268834641416,
+      "std": 1.1473467569049682,
+      "index": 41,
+      "name": "vn_AROU_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.580078125,
+      "mean": 2.598132014740286,
+      "std": 0.8673671870109968,
+      "index": 42,
+      "name": "vn_ARSH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.162109375,
+      "mean": 2.0477901125366014,
+      "std": 1.2947986129769247,
+      "index": 43,
+      "name": "vn_ATCK_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.703125,
+      "mean": 2.757488377891519,
+      "std": 0.7612683382818848,
+      "index": 44,
+      "name": "vn_BKGN_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.9912109375,
+      "mean": 1.9904190258233845,
+      "std": 0.8125624417724847,
+      "index": 45,
+      "name": "vn_BRGT_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.8466796875,
+      "mean": 1.9345466364498272,
+      "std": 1.2385972462552421,
+      "index": 46,
+      "name": "vn_CHNK_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.017578125,
+      "mean": 1.9539406322639123,
+      "std": 0.9446919336155685,
+      "index": 47,
+      "name": "vn_CLRT_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.09375,
+      "mean": 2.0550189805724863,
+      "std": 1.0607504864880268,
+      "index": 48,
+      "name": "vn_COGL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.615234375,
+      "mean": 1.7768127610474993,
+      "std": 1.380275765248455,
+      "index": 49,
+      "name": "vn_DARC_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.48828125,
+      "mean": 2.312260568067474,
+      "std": 1.1840161245345713,
+      "index": 50,
+      "name": "vn_DFLU_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.607421875,
+      "mean": 2.3348412239591023,
+      "std": 1.5237765271225707,
+      "index": 51,
+      "name": "vn_EMPH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.40234375,
+      "mean": 2.3604539644545843,
+      "std": 0.7817028329764907,
+      "index": 52,
+      "name": "vn_ESTH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.0863037109375,
+      "mean": 0.12310119537548471,
+      "std": 0.3223464045556054,
+      "index": 53,
+      "name": "vn_EXPL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.34375,
+      "mean": 2.279200300040356,
+      "std": 1.101667954255364,
+      "index": 54,
+      "name": "vn_FOCS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.7783203125,
+      "mean": 1.8208366819895456,
+      "std": 0.8887691088189655,
+      "index": 55,
+      "name": "vn_FULL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 4.0546875,
+      "mean": 3.4005609453841403,
+      "std": 1.5879135916667575,
+      "index": 56,
+      "name": "vn_GEND_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.48046875,
+      "mean": 2.4855807389539586,
+      "std": 0.8362407455590426,
+      "index": 57,
+      "name": "vn_HARM_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.62109375,
+      "mean": 1.5689204127685619,
+      "std": 0.9582953683335016,
+      "index": 58,
+      "name": "vn_METL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.9140625,
+      "mean": 2.998125433073173,
+      "std": 0.8972021864147376,
+      "index": 59,
+      "name": "vn_RANG_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.75390625,
+      "mean": 2.75796154347263,
+      "std": 0.8880866599667818,
+      "index": 60,
+      "name": "vn_RCQL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.1982421875,
+      "mean": 1.659440031005114,
+      "std": 1.2683657816449025,
+      "index": 61,
+      "name": "vn_REGS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.6796875,
+      "mean": 2.762409533535071,
+      "std": 1.0559868934041674,
+      "index": 62,
+      "name": "vn_RESP_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.033203125,
+      "mean": 2.1257289888535933,
+      "std": 0.8867560874926936,
+      "index": 63,
+      "name": "vn_ROUG_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.134765625,
+      "mean": 2.1037528271970976,
+      "std": 0.8439098859956342,
+      "index": 64,
+      "name": "vn_R_CHST_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.1484375,
+      "mean": 2.077794441132399,
+      "std": 0.8222127645671892,
+      "index": 65,
+      "name": "vn_R_HEAD_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.908203125,
+      "mean": 1.7733385707000286,
+      "std": 1.0051497100020306,
+      "index": 66,
+      "name": "vn_R_MASK_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.435546875,
+      "mean": 1.5528147226580429,
+      "std": 0.8407896707577334,
+      "index": 67,
+      "name": "vn_R_MIXD_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.791015625,
+      "mean": 2.6566753496888085,
+      "std": 1.0468645254121771,
+      "index": 68,
+      "name": "vn_R_NASL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.18359375,
+      "mean": 2.1478247458900888,
+      "std": 0.7407494754804507,
+      "index": 69,
+      "name": "vn_R_ORAL_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.0703125,
+      "mean": 1.9892273364083815,
+      "std": 0.8025529880965941,
+      "index": 70,
+      "name": "vn_R_THRT_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.142578125,
+      "mean": 1.8446904415793908,
+      "std": 1.0930354697088012,
+      "index": 71,
+      "name": "vn_SMTH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.6328125,
+      "mean": 2.6183553154221886,
+      "std": 1.137417834589236,
+      "index": 72,
+      "name": "vn_STNC_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.13671875,
+      "mean": 1.9180240640476394,
+      "std": 0.9581912921907636,
+      "index": 73,
+      "name": "vn_STRU_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.3701171875,
+      "mean": 1.586322378816992,
+      "std": 1.4112492502692389,
+      "index": 74,
+      "name": "vn_S_ASMR_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.087890625,
+      "mean": 1.2597924702209446,
+      "std": 1.0428260400138498,
+      "index": 75,
+      "name": "vn_S_AUTH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.5595703125,
+      "mean": 1.7328185841753485,
+      "std": 1.401054688413831,
+      "index": 76,
+      "name": "vn_S_CART_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 3.79296875,
+      "mean": 3.733097653780534,
+      "std": 1.2779644179123855,
+      "index": 77,
+      "name": "vn_S_CASU_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.59375,
+      "mean": 2.5453815463798213,
+      "std": 1.3180509876187665,
+      "index": 78,
+      "name": "vn_S_CONV_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.720703125,
+      "mean": 2.8381235289007276,
+      "std": 1.1484159743140616,
+      "index": 79,
+      "name": "vn_S_DRAM_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.1953125,
+      "mean": 1.3104302121900349,
+      "std": 1.02089216015836,
+      "index": 80,
+      "name": "vn_S_FORM_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.82421875,
+      "mean": 2.689582377803983,
+      "std": 1.2840680758408665,
+      "index": 81,
+      "name": "vn_S_MONO_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.306640625,
+      "mean": 1.4445058279480092,
+      "std": 1.4460683170773247,
+      "index": 82,
+      "name": "vn_S_NARR_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.407958984375,
+      "mean": 0.5026475858233539,
+      "std": 0.5681029163567813,
+      "index": 83,
+      "name": "vn_S_NEWS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.3515625,
+      "mean": 2.286965486998788,
+      "std": 1.3151676010930746,
+      "index": 84,
+      "name": "vn_S_PLAY_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.212890625,
+      "mean": 1.4744029866277777,
+      "std": 1.2892095901183598,
+      "index": 85,
+      "name": "vn_S_RANT_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.48046875,
+      "mean": 2.3766121907720117,
+      "std": 1.366419250202246,
+      "index": 86,
+      "name": "vn_S_STRY_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 0.646484375,
+      "mean": 0.5903279981481443,
+      "std": 1.2267112659069332,
+      "index": 87,
+      "name": "vn_S_TECH_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.5966796875,
+      "mean": 1.7532606234846722,
+      "std": 1.6176501158843788,
+      "index": 88,
+      "name": "vn_S_WHIS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.1171875,
+      "mean": 2.161177734119869,
+      "std": 1.1901370322668172,
+      "index": 89,
+      "name": "vn_TEMP_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.55859375,
+      "mean": 1.6897957037566482,
+      "std": 0.8516475751479166,
+      "index": 90,
+      "name": "vn_TENS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.328125,
+      "mean": 2.2066478507608456,
+      "std": 1.117695379603358,
+      "index": 91,
+      "name": "vn_VALN_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.517578125,
+      "mean": 2.434721519648775,
+      "std": 1.0789474754591113,
+      "index": 92,
+      "name": "vn_VALS_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.255859375,
+      "mean": 2.217708098175444,
+      "std": 1.2082366875993282,
+      "index": 93,
+      "name": "vn_VFLX_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.5859375,
+      "mean": 2.68630511421397,
+      "std": 0.8859005358398054,
+      "index": 94,
+      "name": "vn_VOLT_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.6484375,
+      "mean": 2.68557545706831,
+      "std": 0.9841889129404477,
+      "index": 95,
+      "name": "vn_VULN_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.578125,
+      "mean": 2.6149303478110935,
+      "std": 0.9092521884264415,
+      "index": 96,
+      "name": "vn_WARM_reg",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 2.33203125,
+      "mean": 2.794242786343248,
+      "std": 1.6213877561079109,
+      "index": 97,
+      "name": "genuineness_0_6",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 6.67578125,
+      "mean": 6.435820632609079,
+      "std": 2.7381134237571776,
+      "index": 98,
+      "name": "blend_0_10",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 100858,
+      "median": 1.0947265625,
+      "mean": 1.109288900521512,
+      "std": 0.337606859085636,
+      "index": 99,
+      "name": "R_quality",
+      "reference": "Ladder S9 training tiers t0+t1"
+    },
+    {
+      "n": 86334,
+      "median": 3.250420093536377,
+      "mean": 3.1984361612691083,
+      "std": 0.2932650772741044,
+      "index": 100,
+      "name": "eiv_extra:Age",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.2887499332427979,
+      "mean": 1.3811701760933326,
+      "std": 0.4353861123291348,
+      "index": 101,
+      "name": "eiv_extra:Arousal",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.6670899391174316,
+      "mean": 2.6823123912073163,
+      "std": 0.15278725406163043,
+      "index": 102,
+      "name": "eiv_extra:Authenticity",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.8075199723243713,
+      "mean": 0.7433251655421445,
+      "std": 0.26430128164096717,
+      "index": 103,
+      "name": "eiv_extra:Background_Noise",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.0396100282669067,
+      "mean": 1.092217661482314,
+      "std": 0.3027553791775194,
+      "index": 104,
+      "name": "eiv_extra:Confident_vs._Hesitant",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": -0.6205700039863586,
+      "mean": -0.11352483743137169,
+      "std": 0.9990797691942275,
+      "index": 105,
+      "name": "eiv_extra:Gender",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.8274550437927246,
+      "mean": 1.8389079492714095,
+      "std": 0.2502744407205243,
+      "index": 106,
+      "name": "eiv_extra:High-Pitched_vs._Low-Pitched",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.8592300415039062,
+      "mean": 1.8405880334930738,
+      "std": 0.46969627870439473,
+      "index": 107,
+      "name": "eiv_extra:Monotone_vs._Expressive",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.1441750526428223,
+      "mean": 2.1313013106264895,
+      "std": 0.33158360306481427,
+      "index": 108,
+      "name": "eiv_extra:Recording_Quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.9294499754905701,
+      "mean": 0.960247558896715,
+      "std": 0.34045657366215626,
+      "index": 109,
+      "name": "eiv_extra:Serious_vs._Humorous",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.2809000015258789,
+      "mean": 0.35815823721519,
+      "std": 0.31974605955248453,
+      "index": 110,
+      "name": "eiv_extra:Soft_vs._Harsh",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.3755199909210205,
+      "mean": 0.38526111358420595,
+      "std": 0.3237793630133792,
+      "index": 111,
+      "name": "eiv_extra:Submissive_vs._Dominant",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.004879999905824661,
+      "mean": 0.07025274407124849,
+      "std": 0.3802600487219566,
+      "index": 112,
+      "name": "eiv_extra:Valence",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.7145049571990967,
+      "mean": 1.7353176950885756,
+      "std": 0.4370195578915393,
+      "index": 113,
+      "name": "eiv_extra:Vulnerable_vs._Emotionally_Detached",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.05105999857187271,
+      "mean": 0.11053503710955616,
+      "std": 0.30007155210290803,
+      "index": 114,
+      "name": "eiv_extra:Warm_vs._Cold",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.301295042037964,
+      "mean": 3.0649791530843467,
+      "std": 0.6930465038138832,
+      "index": 115,
+      "name": "eiv_extra:score_background_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 4.507194995880127,
+      "mean": 4.463207364847295,
+      "std": 0.30318595981832164,
+      "index": 116,
+      "name": "eiv_extra:score_content_enjoyment",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.651510000228882,
+      "mean": 2.5376257037128913,
+      "std": 0.5071074964838481,
+      "index": 117,
+      "name": "eiv_extra:score_overall_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.8076449632644653,
+      "mean": 1.787503076343365,
+      "std": 0.14563218678206527,
+      "index": 118,
+      "name": "eiv_extra:score_speech_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 100000,
+      "median": 4.79886531829834,
+      "mean": 4.795241731826067,
+      "std": 1.0182784192993566,
+      "index": 119,
+      "name": "audiobox:CE",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 100000,
+      "median": 5.64869499206543,
+      "mean": 5.562503679409027,
+      "std": 1.0011551524509332,
+      "index": 120,
+      "name": "audiobox:CU",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 100000,
+      "median": 2.3310649394989014,
+      "mean": 3.0709184169852732,
+      "std": 1.6170256018875913,
+      "index": 121,
+      "name": "audiobox:PC",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 100000,
+      "median": 7.0436248779296875,
+      "mean": 6.890681361730099,
+      "std": 0.8790906386323591,
+      "index": 122,
+      "name": "audiobox:PQ",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.9000399112701416,
+      "mean": 3.703138714838628,
+      "std": 0.6690689472907002,
+      "index": 123,
+      "name": "dnsmos:SIG_raw",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.210659980773926,
+      "mean": 3.140423757673362,
+      "std": 1.1241594804532633,
+      "index": 124,
+      "name": "dnsmos:BAK_raw",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.0848050117492676,
+      "mean": 2.990821489454169,
+      "std": 0.8121166087213617,
+      "index": 125,
+      "name": "dnsmos:OVRL_raw",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.488154888153076,
+      "mean": 3.3328490928835497,
+      "std": 0.5010113943288778,
+      "index": 126,
+      "name": "dnsmos:SIG",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.388885021209717,
+      "mean": 3.1854460151681785,
+      "std": 0.9278418449045288,
+      "index": 127,
+      "name": "dnsmos:BAK",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.8402249813079834,
+      "mean": 2.7299294517182586,
+      "std": 0.6061131702972974,
+      "index": 128,
+      "name": "dnsmos:OVRL",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.420949935913086,
+      "mean": 3.3724163673951186,
+      "std": 0.49603210863665625,
+      "index": 129,
+      "name": "dnsmos:P808_MOS",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 100000,
+      "median": 0.0,
+      "mean": 0.5631161481964588,
+      "std": 0.6471611736170038,
+      "index": 130,
+      "name": "burst_count_log1p",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.9473550319671631,
+      "mean": 1.0074686315439367,
+      "std": 0.553942084368746,
+      "index": 131,
+      "name": "voiceclap_attribute:Affection",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.2288401126861572,
+      "mean": 3.021644544767619,
+      "std": 0.5465122039810525,
+      "index": 132,
+      "name": "voiceclap_attribute:Age",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.39215999841690063,
+      "mean": 0.5834623261187589,
+      "std": 0.5719690704466855,
+      "index": 133,
+      "name": "voiceclap_attribute:Amusement",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.992389976978302,
+      "mean": 1.054016413531058,
+      "std": 0.505868138574585,
+      "index": 134,
+      "name": "voiceclap_attribute:Anger",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.419719934463501,
+      "mean": 1.4614857128565708,
+      "std": 0.62238631168383,
+      "index": 135,
+      "name": "voiceclap_attribute:Arousal",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5087500214576721,
+      "mean": 0.6202804549677778,
+      "std": 0.4794133529339592,
+      "index": 136,
+      "name": "voiceclap_attribute:Astonishment_Surprise",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.7704050540924072,
+      "mean": 2.7888178354528375,
+      "std": 0.1669683320539497,
+      "index": 137,
+      "name": "voiceclap_attribute:Authenticity",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5389750003814697,
+      "mean": 0.5392210828000518,
+      "std": 0.2594475746212373,
+      "index": 138,
+      "name": "voiceclap_attribute:Awe",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5672149658203125,
+      "mean": 0.5490395167199263,
+      "std": 0.2636158468741736,
+      "index": 139,
+      "name": "voiceclap_attribute:Background_Noise",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5924949645996094,
+      "mean": 0.6084580593588692,
+      "std": 0.2357055397281382,
+      "index": 140,
+      "name": "voiceclap_attribute:Bitterness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.2142150402069092,
+      "mean": 1.1858927885746922,
+      "std": 0.5310306644045993,
+      "index": 141,
+      "name": "voiceclap_attribute:Concentration",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.069314956665039,
+      "mean": 1.1800983732841834,
+      "std": 0.46796165730163436,
+      "index": 142,
+      "name": "voiceclap_attribute:Confident_vs._Hesitant",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6433899998664856,
+      "mean": 0.6686713448095073,
+      "std": 0.3338533013861717,
+      "index": 143,
+      "name": "voiceclap_attribute:Confusion",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7800549864768982,
+      "mean": 0.8116338404743276,
+      "std": 0.4055230770997265,
+      "index": 144,
+      "name": "voiceclap_attribute:Contemplation",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7086499929428101,
+      "mean": 0.724383523111139,
+      "std": 0.3387046855614927,
+      "index": 145,
+      "name": "voiceclap_attribute:Contempt",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5879600048065186,
+      "mean": 0.618163726757683,
+      "std": 0.3068147946867882,
+      "index": 146,
+      "name": "voiceclap_attribute:Contentment",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7598699927330017,
+      "mean": 0.7704988923827272,
+      "std": 0.2911966838269773,
+      "index": 147,
+      "name": "voiceclap_attribute:Disappointment",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6246500015258789,
+      "mean": 0.6264186660680259,
+      "std": 0.2071449488796664,
+      "index": 148,
+      "name": "voiceclap_attribute:Disgust",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.9267899990081787,
+      "mean": 0.9327871693356086,
+      "std": 0.34975176131789615,
+      "index": 149,
+      "name": "voiceclap_attribute:Distress",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5348349809646606,
+      "mean": 0.543295802592157,
+      "std": 0.18804279562838036,
+      "index": 150,
+      "name": "voiceclap_attribute:Doubt",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5391650199890137,
+      "mean": 0.6215634148073224,
+      "std": 0.3970246686395772,
+      "index": 151,
+      "name": "voiceclap_attribute:Elation",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.30698999762535095,
+      "mean": 0.37924434886444713,
+      "std": 0.31428682794390456,
+      "index": 152,
+      "name": "voiceclap_attribute:Embarrassment",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6639750003814697,
+      "mean": 0.6583783407411996,
+      "std": 0.26602549840694845,
+      "index": 153,
+      "name": "voiceclap_attribute:Emotional_Numbness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.461760014295578,
+      "mean": 0.4849237334345509,
+      "std": 0.26100025368494806,
+      "index": 154,
+      "name": "voiceclap_attribute:Fatigue_Exhaustion",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6179100275039673,
+      "mean": 0.6282090370019873,
+      "std": 0.2121208839105128,
+      "index": 155,
+      "name": "voiceclap_attribute:Fear",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": -0.1510149985551834,
+      "mean": -0.013310869917496478,
+      "std": 1.0052037474224047,
+      "index": 156,
+      "name": "voiceclap_attribute:Gender",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6581050157546997,
+      "mean": 0.6746224759865587,
+      "std": 0.2684322865220724,
+      "index": 157,
+      "name": "voiceclap_attribute:Helplessness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.8402899503707886,
+      "mean": 1.8284670580672564,
+      "std": 0.37484241293148246,
+      "index": 158,
+      "name": "voiceclap_attribute:High-Pitched_vs._Low-Pitched",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7049649953842163,
+      "mean": 0.7785039447060844,
+      "std": 0.395874479443366,
+      "index": 159,
+      "name": "voiceclap_attribute:Hope_Enthusiasm_Optimism",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.0521550178527832,
+      "mean": 1.1273088933333373,
+      "std": 0.5409773215647035,
+      "index": 160,
+      "name": "voiceclap_attribute:Impatience_and_Irritability",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6080449819564819,
+      "mean": 0.6220023955203661,
+      "std": 0.3321213486452748,
+      "index": 161,
+      "name": "voiceclap_attribute:Infatuation",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.5982600450515747,
+      "mean": 1.5977286783252633,
+      "std": 0.4400728624328807,
+      "index": 162,
+      "name": "voiceclap_attribute:Interest",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5020999908447266,
+      "mean": 0.5876942506260574,
+      "std": 0.463342551171415,
+      "index": 163,
+      "name": "voiceclap_attribute:Intoxication_Altered_States_of_Consciousness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5226100087165833,
+      "mean": 0.5308071375423983,
+      "std": 0.24482711004802604,
+      "index": 164,
+      "name": "voiceclap_attribute:Jealousy_&_Envy",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5379300117492676,
+      "mean": 0.5532774595158648,
+      "std": 0.21978142314655838,
+      "index": 165,
+      "name": "voiceclap_attribute:Longing",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.8329449892044067,
+      "mean": 0.8624929730929659,
+      "std": 0.34573004847101324,
+      "index": 166,
+      "name": "voiceclap_attribute:Malevolence_Malice",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.77516508102417,
+      "mean": 1.8317600349848255,
+      "std": 0.5935313416654533,
+      "index": 167,
+      "name": "voiceclap_attribute:Monotone_vs._Expressive",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.3814600110054016,
+      "mean": 0.39051640200795856,
+      "std": 0.21826845150726049,
+      "index": 168,
+      "name": "voiceclap_attribute:Pain",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5032349824905396,
+      "mean": 0.5481957390017023,
+      "std": 0.3009037947090346,
+      "index": 169,
+      "name": "voiceclap_attribute:Pleasure_Ecstasy",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7803999781608582,
+      "mean": 0.7270420683449897,
+      "std": 0.3492897518935281,
+      "index": 170,
+      "name": "voiceclap_attribute:Pride",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.313465118408203,
+      "mean": 2.296399165717872,
+      "std": 0.3275849694766895,
+      "index": 171,
+      "name": "voiceclap_attribute:Recording_Quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.0246200561523438,
+      "mean": 1.012187540338616,
+      "std": 0.4145529669758216,
+      "index": 172,
+      "name": "voiceclap_attribute:Relief",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7516250014305115,
+      "mean": 0.7885245068796991,
+      "std": 0.3129951755410498,
+      "index": 173,
+      "name": "voiceclap_attribute:Sadness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.8034999966621399,
+      "mean": 0.9706808609527106,
+      "std": 0.5684177640392118,
+      "index": 174,
+      "name": "voiceclap_attribute:Serious_vs._Humorous",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6354249715805054,
+      "mean": 0.6762426486706584,
+      "std": 0.41905586821169893,
+      "index": 175,
+      "name": "voiceclap_attribute:Sexual_Lust",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5264849662780762,
+      "mean": 0.5570663208039213,
+      "std": 0.282978040622156,
+      "index": 176,
+      "name": "voiceclap_attribute:Shame",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.15961000323295593,
+      "mean": 0.18976561994326144,
+      "std": 0.3601774589450046,
+      "index": 177,
+      "name": "voiceclap_attribute:Soft_vs._Harsh",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7056000232696533,
+      "mean": 0.7181200376662445,
+      "std": 0.29060464071472025,
+      "index": 178,
+      "name": "voiceclap_attribute:Sourness",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.6232799887657166,
+      "mean": 0.6189200245558099,
+      "std": 0.35862886870951055,
+      "index": 179,
+      "name": "voiceclap_attribute:Submissive_vs._Dominant",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.5404850244522095,
+      "mean": 0.6130332111944916,
+      "std": 0.3789029879525547,
+      "index": 180,
+      "name": "voiceclap_attribute:Teasing",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.3836749792099,
+      "mean": 1.3183574866845866,
+      "std": 0.5294454318985885,
+      "index": 181,
+      "name": "voiceclap_attribute:Thankfulness_Gratitude",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 0.7161700129508972,
+      "mean": 0.7246119352916757,
+      "std": 0.3591677442924409,
+      "index": 182,
+      "name": "voiceclap_attribute:Triumph",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": -0.006764999590814114,
+      "mean": -0.036788146103897475,
+      "std": 0.6346166296817904,
+      "index": 183,
+      "name": "voiceclap_attribute:Valence",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.6384799480438232,
+      "mean": 1.6785249368599358,
+      "std": 0.5561136324638399,
+      "index": 184,
+      "name": "voiceclap_attribute:Vulnerable_vs._Emotionally_Detached",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": -0.06615500152111053,
+      "mean": -0.031065561354896888,
+      "std": 0.39995730447897204,
+      "index": 185,
+      "name": "voiceclap_attribute:Warm_vs._Cold",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 10.913934707641602,
+      "mean": 11.656343798457113,
+      "std": 6.354163515438911,
+      "index": 186,
+      "name": "voiceclap_attribute:duration",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 3.244800090789795,
+      "mean": 3.2271762508982254,
+      "std": 0.4984886513408118,
+      "index": 187,
+      "name": "voiceclap_attribute:score_background_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 4.655735015869141,
+      "mean": 4.695057589813864,
+      "std": 0.147114470687937,
+      "index": 188,
+      "name": "voiceclap_attribute:score_content_enjoyment",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 2.6354949474334717,
+      "mean": 2.6035570758128124,
+      "std": 0.41248658825493245,
+      "index": 189,
+      "name": "voiceclap_attribute:score_overall_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 1.8909399509429932,
+      "mean": 1.9126586470621174,
+      "std": 0.06929761266934904,
+      "index": 190,
+      "name": "voiceclap_attribute:score_speech_quality",
+      "reference": "P3 train-only seeded random subset"
+    },
+    {
+      "n": 86334,
+      "median": 9.027975082397461,
+      "mean": 9.491173106342295,
+      "std": 3.7555096719457906,
+      "index": 191,
+      "name": "voiceclap_attribute:talking_speed",
+      "reference": "P3 train-only seeded random subset"
+    }
+  ]
+}
